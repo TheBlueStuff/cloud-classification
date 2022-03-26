@@ -15,19 +15,23 @@ class ResNet50(nn.Module):
             *(list(models.resnet50(pretrained=True).children())[:-1])
         )
         
-        self.linear = nn.Linear(2048, out_dim)
+        self.linear1 = nn.Linear(2048, 512)
+        self.linear2 = nn.Linear(512, out_dim, bias=False)
         
         self.reset_parameters()
         
     def reset_parameters(self):
         gain = nn.init.calculate_gain('relu')
         
-        nn.init.xavier_normal_(self.linear.weight, gain=gain)
-        self.linear.bias.data.fill_(0)
+        nn.init.xavier_normal_(self.linear1.weight, gain=gain)
+        nn.init.xavier_normal_(self.linear2.weight, gain=gain)
+        
+        self.linear1.bias.data.fill_(0)
         
     def forward(self, x):
         
         x = F.relu(self.cnn(x).view(-1, 2048))
-        x = self.linear(x)
+        x = F.relu(self.linear1(x))
+        x = self.linear2(x)
         
         return x
