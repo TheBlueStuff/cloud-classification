@@ -1,9 +1,13 @@
+import math
 import cv2
 import numpy as np
 import glob
 import os
 from random import sample
+import torch
+import torch.nn as nn
 import torchvision.transforms as T
+
 
 
 ########### FUNCTIONS ###########
@@ -47,3 +51,12 @@ def augmentate(img, aug_types ,resize=256):
         
     transform = T.Compose([v for k,v in t_dict.items() if k in aug_types])
     return transform(img)
+
+def loge_loss(x , labels):
+    epsilon = 1 - math.log(2)
+    criterion = nn.CrossEntropyLoss(reduction='none')
+    
+    loss = criterion(x, labels)
+   
+    loss = torch.mean(torch.log(epsilon + loss) - math.log(epsilon))
+    return loss

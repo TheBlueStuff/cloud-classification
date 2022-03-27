@@ -18,20 +18,24 @@ class GCD:
         self.resize = resize
         self.aug_types = [aug_types] if isinstance(aug_types, str) else aug_types
 
+        self.norm_mean = 155.5673
+        self.norm_std = 70.5983
+        
     def __len__(self):
         return len(self.image_paths)
 
     def __getitem__(self, item):
         image = read_image(self.image_paths[item]).float()
+        image = (image-self.norm_mean)/self.norm_std
 
-        image = T.Compose([
-                    T.ToPILImage(),
-                    T.ToTensor(),
-                    T.Normalize(
-                        mean=[0.485, 0.456, 0.406],
-                        std=[0.229, 0.224, 0.225],
-                    )
-                    ])(image)
+        # image = T.Compose([
+        #             T.ToPILImage(),
+        #             T.ToTensor(),
+        #             T.Normalize(
+        #                 mean=[0.485, 0.456, 0.406],
+        #                 std=[0.229, 0.224, 0.225],
+        #             )
+        #             ])(image)
 
         targets = self.targets[item]
         #substract 1 since list of targets start from 1

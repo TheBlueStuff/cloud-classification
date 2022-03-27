@@ -2,7 +2,7 @@
 DATA_DIR = '/data/mandonaire'
 DEVICE = 'cuda:2'
 
-EPOCHS = 10
+EPOCHS = 25
 BATCH_SIZE = 32
 
 
