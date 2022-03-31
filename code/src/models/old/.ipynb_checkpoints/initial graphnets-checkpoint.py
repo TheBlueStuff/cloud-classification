@@ -57,33 +57,23 @@ class GraphConvGNN(nn.Module):
     
 
 class GATConvGNN(nn.Module):
-    def __init__(self, num_classes, hidden_dim, num_hidden, num_heads, threshold):
+    def __init__(self, num_classes):
         super().__init__()
 
         self.num_classes = num_classes
-        self.num_hidden = num_hidden
-        self.num_heads = num_heads
 
         self.cnn = torch.nn.Sequential(
             *(list(models.resnet50(pretrained=True).children())[:-1])
         )
-        
-        
-        self.gnn_layer_1 = GATConv(2048, hidden_dim, num_heads=4, residual=True)
-        
-        self.gnn_stack = nn.ModuleList(
-                GATConv(hidden_dim, hidden_dim, num_heads=num_heads, residual=True)
-                for i in range(num_hidden-2)
-            )
-        
-        self.gnn_stack.append(GATConv(hidden_dim, hidden_dim, num_heads=1, residual=True))
-        
 
-        self.linear_1 = nn.Linear(2048 + hidden_dim, 1024)
+        self.gnn_layer_1 = GATConv(2048, 1024, num_heads=4, residual=True)
+        self.gnn_layer_2 = GATConv(1024, 512, num_heads=1, residual=True)
+
+        self.linear_1 = nn.Linear(2048 + 512, 1024)
         self.class_1 = nn.Linear(1024, num_classes)
         self.class_2 = nn.Linear(2048, num_classes)
         
-        self.THRESHOLD = threshold
+        self.THRESHOLD = 0.7
 
     def forward(self, x, get_embeddings=False):
         
@@ -91,11 +81,7 @@ class GATConvGNN(nn.Module):
         g = self.build_graph(deep_features)
 
         x = F.relu(self.gnn_layer_1(g, deep_features).sum(dim=1))
-        
-        for gnn_layer in self.gnn_stack[:-1]:
-            x = F.relu(gnn_layer(g, x).sum(dim=1))
-        
-        x = self.gnn_stack[-1](g, x).squeeze(1)
+        x = self.gnn_layer_2(g, x).squeeze(1)
 
         x = torch.cat([deep_features, x], dim=1)
         x = F.leaky_relu(self.linear_1(x))
