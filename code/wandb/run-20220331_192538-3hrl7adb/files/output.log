@@ -1,0 +1,68 @@
+
+Epoch [1/100], Step [155/313], Loss: 0.7936
+Epoch [1/100], Step [155/313], Loss: 0.5419
+Epoch [1/100], Loss test: 1.1195
+Epoch [1/100], Step [310/313], Loss: 0.4577
+Epoch [1/100], Loss test: 0.9442
+Epoch [2/100], Step [155/313], Loss: 0.7440
+Epoch [2/100], Loss test: 0.9488
+Epoch [2/100], Step [310/313], Loss: 0.4852
+Epoch [2/100], Loss test: 0.9661
+Epoch [3/100], Step [155/313], Loss: 0.1984
+Epoch [3/100], Loss test: 0.9305
+Epoch [3/100], Step [310/313], Loss: 0.3255
+Epoch [3/100], Loss test: 0.9189
+Epoch [4/100], Step [155/313], Loss: 0.4073
+Epoch [4/100], Loss test: 0.9509
+Epoch [4/100], Step [310/313], Loss: 0.2257
+Epoch [4/100], Loss test: 0.9518
+Epoch [5/100], Step [155/313], Loss: 0.2059
+Epoch [5/100], Loss test: 0.8877
+Epoch [5/100], Step [310/313], Loss: 0.2236
+Epoch [5/100], Loss test: 0.9375
+Epoch [6/100], Step [155/313], Loss: 0.1721
+Epoch [6/100], Loss test: 0.9200
+Epoch [6/100], Step [310/313], Loss: 0.3652
+Epoch [6/100], Loss test: 0.9027
+Epoch [7/100], Step [155/313], Loss: 0.1407
+Epoch [7/100], Loss test: 0.9075
+Epoch [7/100], Step [310/313], Loss: 0.2382
+Epoch [7/100], Loss test: 0.9489
+Epoch [8/100], Step [155/313], Loss: 0.1542
+Epoch [8/100], Loss test: 0.9530
+Epoch [8/100], Step [310/313], Loss: 0.1632
+Epoch [8/100], Loss test: 0.9179
+Exception in thread NetStatThr:
+Traceback (most recent call last):
+  File "/home/ltorres/miniconda3/lib/python3.9/threading.py", line 973, in _bootstrap_inner
+    self.run()
+  File "/home/ltorres/miniconda3/lib/python3.9/threading.py", line 910, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 149, in check_network_status
+    status_response = self._interface.communicate_network_status()
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface.py", line 125, in communicate_network_status
+    resp = self._communicate_network_status(status)
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 397, in _communicate_network_status
+    resp = self._communicate(req, local=True)
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 222, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 227, in _communicate_async
+    raise Exception("The wandb backend process has shutdown")
+Exception: The wandb backend process has shutdown
+Exception in thread ChkStopThr:
+Traceback (most recent call last):
+  File "/home/ltorres/miniconda3/lib/python3.9/threading.py", line 973, in _bootstrap_inner
+    self.run()
+  File "/home/ltorres/miniconda3/lib/python3.9/threading.py", line 910, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 167, in check_status
+    status_response = self._interface.communicate_stop_status()
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface.py", line 114, in communicate_stop_status
+    resp = self._communicate_stop_status(status)
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 387, in _communicate_stop_status
+    resp = self._communicate(req, local=True)
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 222, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 227, in _communicate_async
+    raise Exception("The wandb backend process has shutdown")
+Exception: The wandb backend process has shutdown

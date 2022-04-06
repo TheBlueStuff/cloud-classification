@@ -1,0 +1,255 @@
+2022-03-31 22:44:19,341 INFO    MainThread:15645 [internal.py:wandb_internal():92] W&B internal server running at pid: 15645, started at: 2022-03-31 22:44:19.341538
+2022-03-31 22:44:19,344 INFO    WriterThread:15645 [datastore.py:open_for_write():77] open: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/run-39z4xymn.wandb
+2022-03-31 22:44:19,347 DEBUG   SenderThread:15645 [sender.py:send():235] send: header
+2022-03-31 22:44:19,348 DEBUG   SenderThread:15645 [sender.py:send():235] send: run
+2022-03-31 22:44:19,690 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: check_version
+2022-03-31 22:44:19,692 INFO    SenderThread:15645 [dir_watcher.py:__init__():169] watching files in: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/files
+2022-03-31 22:44:19,692 INFO    SenderThread:15645 [sender.py:_start_run_threads():812] run started: 39z4xymn with start time 1648784658
+2022-03-31 22:44:19,692 DEBUG   SenderThread:15645 [sender.py:send():235] send: summary
+2022-03-31 22:44:19,692 INFO    SenderThread:15645 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-31 22:44:19,693 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: check_version
+2022-03-31 22:44:19,739 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: run_start
+2022-03-31 22:44:19,745 DEBUG   HandlerThread:15645 [meta.py:__init__():37] meta init
+2022-03-31 22:44:19,745 DEBUG   HandlerThread:15645 [meta.py:__init__():51] meta init done
+2022-03-31 22:44:19,745 DEBUG   HandlerThread:15645 [meta.py:probe():211] probe
+2022-03-31 22:44:19,753 DEBUG   HandlerThread:15645 [meta.py:_setup_git():201] setup git
+2022-03-31 22:44:19,775 DEBUG   HandlerThread:15645 [meta.py:_setup_git():208] setup git done
+2022-03-31 22:44:19,775 DEBUG   HandlerThread:15645 [meta.py:_save_pip():55] save pip
+2022-03-31 22:44:19,776 DEBUG   HandlerThread:15645 [meta.py:_save_pip():69] save pip done
+2022-03-31 22:44:19,776 DEBUG   HandlerThread:15645 [meta.py:_save_conda():76] save conda
+2022-03-31 22:44:20,696 INFO    Thread-7  :15645 [dir_watcher.py:_on_file_created():217] file/dir created: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/files/requirements.txt
+2022-03-31 22:44:20,697 INFO    Thread-7  :15645 [dir_watcher.py:_on_file_created():217] file/dir created: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/files/wandb-summary.json
+2022-03-31 22:44:20,697 INFO    Thread-7  :15645 [dir_watcher.py:_on_file_created():217] file/dir created: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/files/conda-environment.yaml
+2022-03-31 22:44:21,394 DEBUG   HandlerThread:15645 [meta.py:_save_conda():86] save conda done
+2022-03-31 22:44:21,394 DEBUG   HandlerThread:15645 [meta.py:probe():249] probe done
+2022-03-31 22:44:21,401 DEBUG   SenderThread:15645 [sender.py:send():235] send: files
+2022-03-31 22:44:21,401 INFO    SenderThread:15645 [sender.py:_save_file():947] saving file wandb-metadata.json with policy now
+2022-03-31 22:44:21,418 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-31 22:44:21,419 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: stop_status
+2022-03-31 22:44:21,431 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 22:44:21,431 INFO    HandlerThread:15645 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 22:44:21,542 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: resume
+2022-03-31 22:44:21,543 INFO    HandlerThread:15645 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-31 22:44:21,543 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 22:44:21,543 INFO    HandlerThread:15645 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 22:44:21,669 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: resume
+2022-03-31 22:44:21,669 INFO    HandlerThread:15645 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-31 22:44:21,670 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 22:44:21,670 INFO    HandlerThread:15645 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 22:44:21,683 DEBUG   SenderThread:15645 [sender.py:send():235] send: telemetry
+2022-03-31 22:44:21,695 INFO    Thread-7  :15645 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/files/conda-environment.yaml
+2022-03-31 22:44:21,696 INFO    Thread-7  :15645 [dir_watcher.py:_on_file_created():217] file/dir created: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/files/output.log
+2022-03-31 22:44:21,696 INFO    Thread-7  :15645 [dir_watcher.py:_on_file_created():217] file/dir created: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/files/wandb-metadata.json
+2022-03-31 22:44:21,811 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: resume
+2022-03-31 22:44:21,811 INFO    HandlerThread:15645 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-31 22:44:21,812 DEBUG   SenderThread:15645 [sender.py:send():235] send: stats
+2022-03-31 22:44:21,813 DEBUG   SenderThread:15645 [sender.py:send():235] send: stats
+2022-03-31 22:44:21,813 DEBUG   SenderThread:15645 [sender.py:send():235] send: stats
+2022-03-31 22:44:22,385 INFO    Thread-11 :15645 [upload_job.py:push():137] Uploaded file /tmp/tmptrcn0lhnwandb/o25th4gi-wandb-metadata.json
+2022-03-31 22:44:23,779 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 22:44:23,779 INFO    HandlerThread:15645 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 22:44:23,866 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: resume
+2022-03-31 22:44:23,866 INFO    HandlerThread:15645 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-31 22:44:23,866 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 22:44:23,867 INFO    HandlerThread:15645 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 22:44:23,999 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: resume
+2022-03-31 22:44:24,000 INFO    HandlerThread:15645 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-31 22:44:24,006 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 22:44:24,006 INFO    HandlerThread:15645 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 22:44:24,150 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: resume
+2022-03-31 22:44:24,151 INFO    HandlerThread:15645 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-31 22:44:24,151 DEBUG   SenderThread:15645 [sender.py:send():235] send: stats
+2022-03-31 22:44:24,152 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 22:44:24,154 INFO    HandlerThread:15645 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 22:44:24,299 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: resume
+2022-03-31 22:44:24,300 INFO    HandlerThread:15645 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-31 22:44:24,300 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 22:44:24,300 INFO    HandlerThread:15645 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 22:44:24,454 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: resume
+2022-03-31 22:44:24,454 INFO    HandlerThread:15645 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-31 22:44:24,455 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 22:44:24,455 INFO    HandlerThread:15645 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 22:44:24,601 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: resume
+2022-03-31 22:44:24,602 INFO    HandlerThread:15645 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-31 22:44:24,603 DEBUG   SenderThread:15645 [sender.py:send():235] send: stats
+2022-03-31 22:44:24,605 DEBUG   SenderThread:15645 [sender.py:send():235] send: stats
+2022-03-31 22:44:24,605 DEBUG   SenderThread:15645 [sender.py:send():235] send: stats
+2022-03-31 22:44:24,606 DEBUG   SenderThread:15645 [sender.py:send():235] send: stats
+2022-03-31 22:44:24,607 DEBUG   SenderThread:15645 [sender.py:send():235] send: stats
+2022-03-31 22:44:25,697 INFO    Thread-7  :15645 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/files/output.log
+2022-03-31 22:44:27,184 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 22:44:27,184 INFO    HandlerThread:15645 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 22:44:27,325 DEBUG   SenderThread:15645 [sender.py:send():235] send: stats
+2022-03-31 22:44:27,698 INFO    Thread-7  :15645 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/files/output.log
+2022-03-31 22:44:33,790 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: resume
+2022-03-31 22:44:33,790 INFO    HandlerThread:15645 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-31 22:44:33,791 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 22:44:33,791 INFO    HandlerThread:15645 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 22:44:33,911 DEBUG   SenderThread:15645 [sender.py:send():235] send: stats
+2022-03-31 22:44:34,067 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: resume
+2022-03-31 22:44:34,067 INFO    HandlerThread:15645 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-31 22:44:34,068 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 22:44:34,068 INFO    HandlerThread:15645 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 22:44:34,188 DEBUG   SenderThread:15645 [sender.py:send():235] send: stats
+2022-03-31 22:44:34,502 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: resume
+2022-03-31 22:44:34,502 INFO    HandlerThread:15645 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-31 22:44:34,513 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 22:44:34,513 INFO    HandlerThread:15645 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 22:44:34,630 DEBUG   SenderThread:15645 [sender.py:send():235] send: stats
+2022-03-31 22:44:34,694 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: resume
+2022-03-31 22:44:34,694 INFO    HandlerThread:15645 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-31 22:44:34,694 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 22:44:34,695 INFO    HandlerThread:15645 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 22:44:34,820 DEBUG   SenderThread:15645 [sender.py:send():235] send: stats
+2022-03-31 22:44:34,837 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: resume
+2022-03-31 22:44:34,838 INFO    HandlerThread:15645 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-31 22:44:34,866 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 22:44:34,866 INFO    HandlerThread:15645 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 22:44:34,961 DEBUG   SenderThread:15645 [sender.py:send():235] send: stats
+2022-03-31 22:44:35,172 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: resume
+2022-03-31 22:44:35,173 INFO    HandlerThread:15645 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-31 22:44:35,173 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 22:44:35,173 INFO    HandlerThread:15645 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 22:44:35,296 DEBUG   SenderThread:15645 [sender.py:send():235] send: stats
+2022-03-31 22:44:35,323 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: resume
+2022-03-31 22:44:35,323 INFO    HandlerThread:15645 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-31 22:44:35,323 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 22:44:35,324 INFO    HandlerThread:15645 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 22:44:35,467 DEBUG   SenderThread:15645 [sender.py:send():235] send: stats
+2022-03-31 22:44:35,674 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: resume
+2022-03-31 22:44:35,674 INFO    HandlerThread:15645 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-31 22:44:35,675 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 22:44:35,675 INFO    HandlerThread:15645 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 22:44:35,791 DEBUG   SenderThread:15645 [sender.py:send():235] send: stats
+2022-03-31 22:44:36,041 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: resume
+2022-03-31 22:44:36,041 INFO    HandlerThread:15645 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-31 22:44:36,044 DEBUG   SenderThread:15645 [sender.py:send():235] send: telemetry
+2022-03-31 22:44:36,045 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-31 22:44:36,046 DEBUG   SenderThread:15645 [sender.py:send():235] send: telemetry
+2022-03-31 22:44:36,951 DEBUG   SenderThread:15645 [sender.py:send():235] send: exit
+2022-03-31 22:44:36,951 INFO    SenderThread:15645 [sender.py:send_exit():371] handling exit code: 0
+2022-03-31 22:44:36,951 INFO    SenderThread:15645 [sender.py:send_exit():373] handling runtime: 9
+2022-03-31 22:44:36,954 INFO    SenderThread:15645 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-31 22:44:36,955 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 22:44:36,955 INFO    SenderThread:15645 [sender.py:send_exit():379] send defer
+2022-03-31 22:44:36,955 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 22:44:36,956 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: defer
+2022-03-31 22:44:36,956 INFO    HandlerThread:15645 [handler.py:handle_request_defer():164] handle defer: 0
+2022-03-31 22:44:36,956 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: defer
+2022-03-31 22:44:36,957 INFO    SenderThread:15645 [sender.py:send_request_defer():388] handle sender defer: 0
+2022-03-31 22:44:36,957 INFO    SenderThread:15645 [sender.py:transition_state():392] send defer: 1
+2022-03-31 22:44:36,957 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: defer
+2022-03-31 22:44:36,957 INFO    HandlerThread:15645 [handler.py:handle_request_defer():164] handle defer: 1
+2022-03-31 22:44:37,075 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: defer
+2022-03-31 22:44:37,075 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 22:44:37,075 INFO    SenderThread:15645 [sender.py:send_request_defer():388] handle sender defer: 1
+2022-03-31 22:44:37,076 INFO    SenderThread:15645 [sender.py:transition_state():392] send defer: 2
+2022-03-31 22:44:37,076 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 22:44:37,077 DEBUG   SenderThread:15645 [sender.py:send():235] send: stats
+2022-03-31 22:44:37,077 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: defer
+2022-03-31 22:44:37,078 INFO    HandlerThread:15645 [handler.py:handle_request_defer():164] handle defer: 2
+2022-03-31 22:44:37,078 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: defer
+2022-03-31 22:44:37,078 INFO    SenderThread:15645 [sender.py:send_request_defer():388] handle sender defer: 2
+2022-03-31 22:44:37,078 INFO    SenderThread:15645 [sender.py:transition_state():392] send defer: 3
+2022-03-31 22:44:37,078 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: defer
+2022-03-31 22:44:37,078 INFO    HandlerThread:15645 [handler.py:handle_request_defer():164] handle defer: 3
+2022-03-31 22:44:37,079 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: defer
+2022-03-31 22:44:37,079 INFO    SenderThread:15645 [sender.py:send_request_defer():388] handle sender defer: 3
+2022-03-31 22:44:37,079 INFO    SenderThread:15645 [sender.py:transition_state():392] send defer: 4
+2022-03-31 22:44:37,079 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: defer
+2022-03-31 22:44:37,079 INFO    HandlerThread:15645 [handler.py:handle_request_defer():164] handle defer: 4
+2022-03-31 22:44:37,079 DEBUG   SenderThread:15645 [sender.py:send():235] send: summary
+2022-03-31 22:44:37,080 INFO    SenderThread:15645 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-31 22:44:37,080 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: defer
+2022-03-31 22:44:37,080 INFO    SenderThread:15645 [sender.py:send_request_defer():388] handle sender defer: 4
+2022-03-31 22:44:37,080 INFO    SenderThread:15645 [sender.py:transition_state():392] send defer: 5
+2022-03-31 22:44:37,081 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: defer
+2022-03-31 22:44:37,081 INFO    HandlerThread:15645 [handler.py:handle_request_defer():164] handle defer: 5
+2022-03-31 22:44:37,081 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: defer
+2022-03-31 22:44:37,081 INFO    SenderThread:15645 [sender.py:send_request_defer():388] handle sender defer: 5
+2022-03-31 22:44:37,179 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 22:44:37,373 INFO    SenderThread:15645 [sender.py:transition_state():392] send defer: 6
+2022-03-31 22:44:37,374 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 22:44:37,374 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: defer
+2022-03-31 22:44:37,375 INFO    HandlerThread:15645 [handler.py:handle_request_defer():164] handle defer: 6
+2022-03-31 22:44:37,375 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: defer
+2022-03-31 22:44:37,375 INFO    SenderThread:15645 [sender.py:send_request_defer():388] handle sender defer: 6
+2022-03-31 22:44:37,375 INFO    SenderThread:15645 [dir_watcher.py:finish():283] shutting down directory watcher
+2022-03-31 22:44:37,476 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 22:44:37,701 INFO    SenderThread:15645 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/files/config.yaml
+2022-03-31 22:44:37,702 INFO    SenderThread:15645 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/files/output.log
+2022-03-31 22:44:37,702 INFO    SenderThread:15645 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/files/wandb-summary.json
+2022-03-31 22:44:37,702 INFO    SenderThread:15645 [dir_watcher.py:finish():313] scan: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/files
+2022-03-31 22:44:37,702 INFO    SenderThread:15645 [dir_watcher.py:finish():327] scan save: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/files/config.yaml config.yaml
+2022-03-31 22:44:37,703 INFO    SenderThread:15645 [dir_watcher.py:finish():327] scan save: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/files/output.log output.log
+2022-03-31 22:44:37,703 INFO    SenderThread:15645 [dir_watcher.py:finish():327] scan save: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/files/wandb-summary.json wandb-summary.json
+2022-03-31 22:44:37,703 INFO    SenderThread:15645 [dir_watcher.py:finish():327] scan save: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/files/requirements.txt requirements.txt
+2022-03-31 22:44:37,706 INFO    SenderThread:15645 [dir_watcher.py:finish():327] scan save: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/files/wandb-metadata.json wandb-metadata.json
+2022-03-31 22:44:37,706 INFO    SenderThread:15645 [dir_watcher.py:finish():327] scan save: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/files/conda-environment.yaml conda-environment.yaml
+2022-03-31 22:44:37,706 INFO    SenderThread:15645 [sender.py:transition_state():392] send defer: 7
+2022-03-31 22:44:37,707 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 22:44:37,718 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: defer
+2022-03-31 22:44:37,723 INFO    HandlerThread:15645 [handler.py:handle_request_defer():164] handle defer: 7
+2022-03-31 22:44:37,723 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: defer
+2022-03-31 22:44:37,724 INFO    SenderThread:15645 [sender.py:send_request_defer():388] handle sender defer: 7
+2022-03-31 22:44:37,724 INFO    SenderThread:15645 [file_pusher.py:finish():145] shutting down file pusher
+2022-03-31 22:44:37,825 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 22:44:37,826 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 22:44:37,929 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 22:44:37,929 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 22:44:38,031 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 22:44:38,032 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 22:44:38,134 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 22:44:38,134 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 22:44:38,237 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 22:44:38,237 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 22:44:38,339 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 22:44:38,340 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 22:44:38,443 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 22:44:38,444 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 22:44:38,548 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 22:44:38,548 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 22:44:38,650 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 22:44:38,651 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 22:44:38,695 INFO    Thread-31 :15645 [upload_job.py:push():137] Uploaded file /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/files/output.log
+2022-03-31 22:44:38,724 INFO    Thread-30 :15645 [upload_job.py:push():137] Uploaded file /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/files/config.yaml
+2022-03-31 22:44:38,731 INFO    Thread-33 :15645 [upload_job.py:push():137] Uploaded file /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/files/requirements.txt
+2022-03-31 22:44:38,753 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 22:44:38,753 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 22:44:38,771 INFO    Thread-32 :15645 [upload_job.py:push():137] Uploaded file /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/files/wandb-summary.json
+2022-03-31 22:44:38,800 INFO    Thread-34 :15645 [upload_job.py:push():137] Uploaded file /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/files/conda-environment.yaml
+2022-03-31 22:44:38,855 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 22:44:38,856 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 22:44:38,958 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 22:44:38,958 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 22:44:39,001 INFO    Thread-6  :15645 [sender.py:transition_state():392] send defer: 8
+2022-03-31 22:44:39,001 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: defer
+2022-03-31 22:44:39,002 INFO    HandlerThread:15645 [handler.py:handle_request_defer():164] handle defer: 8
+2022-03-31 22:44:39,002 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: defer
+2022-03-31 22:44:39,002 INFO    SenderThread:15645 [sender.py:send_request_defer():388] handle sender defer: 8
+2022-03-31 22:44:39,061 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 22:44:39,426 INFO    SenderThread:15645 [sender.py:transition_state():392] send defer: 9
+2022-03-31 22:44:39,426 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 22:44:39,427 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: defer
+2022-03-31 22:44:39,427 INFO    HandlerThread:15645 [handler.py:handle_request_defer():164] handle defer: 9
+2022-03-31 22:44:39,428 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: defer
+2022-03-31 22:44:39,428 INFO    SenderThread:15645 [sender.py:send_request_defer():388] handle sender defer: 9
+2022-03-31 22:44:39,428 INFO    SenderThread:15645 [sender.py:transition_state():392] send defer: 10
+2022-03-31 22:44:39,429 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: defer
+2022-03-31 22:44:39,429 DEBUG   SenderThread:15645 [sender.py:send():235] send: final
+2022-03-31 22:44:39,429 INFO    HandlerThread:15645 [handler.py:handle_request_defer():164] handle defer: 10
+2022-03-31 22:44:39,429 DEBUG   SenderThread:15645 [sender.py:send():235] send: footer
+2022-03-31 22:44:39,430 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: defer
+2022-03-31 22:44:39,430 INFO    SenderThread:15645 [sender.py:send_request_defer():388] handle sender defer: 10
+2022-03-31 22:44:39,529 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 22:44:39,529 DEBUG   SenderThread:15645 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 22:44:39,530 INFO    SenderThread:15645 [file_pusher.py:join():150] waiting for file pusher
+2022-03-31 22:44:40,230 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: sampled_history
+2022-03-31 22:44:40,231 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: get_summary
+2022-03-31 22:44:40,232 DEBUG   HandlerThread:15645 [handler.py:handle_request():141] handle_request: shutdown
+2022-03-31 22:44:40,232 INFO    HandlerThread:15645 [handler.py:finish():778] shutting down handler
+2022-03-31 22:44:40,429 INFO    WriterThread:15645 [datastore.py:close():281] close: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_224418-39z4xymn/run-39z4xymn.wandb
+2022-03-31 22:44:41,127 INFO    SenderThread:15645 [sender.py:finish():1078] shutting down sender
+2022-03-31 22:44:41,128 INFO    SenderThread:15645 [file_pusher.py:finish():145] shutting down file pusher
+2022-03-31 22:44:41,128 INFO    SenderThread:15645 [file_pusher.py:join():150] waiting for file pusher
+2022-03-31 22:44:41,130 INFO    MainThread:15645 [internal.py:handle_exit():82] Internal process exited

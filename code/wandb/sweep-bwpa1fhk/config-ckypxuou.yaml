@@ -1,0 +1,31 @@
+wandb_version: 1
+
+batch_size:
+  value: 17
+classes:
+  value:
+  - 1_cumulus
+  - 2_altocumulus
+  - 3_cirrus
+  - 4_clearsky
+  - 5_stratocumulus
+  - 6_cumulonimbus
+  - 7_mixed
+criterion:
+  value: cross_entropy
+device:
+  value: cuda:2
+epochs:
+  value: 30
+hidden_dim:
+  value: 512
+learning_rate:
+  value: 1.930988729203726e-05
+num_heads:
+  value: 4
+num_hidden:
+  value: 3
+optimizer:
+  value: sgd
+similarity_threshold:
+  value: 0.8

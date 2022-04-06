@@ -1,0 +1,22 @@
+wandb_version: 1
+
+batch_size:
+  value: 23
+criterion:
+  value: loge
+device:
+  value: cuda:2
+epochs:
+  value: 25
+hidden_dim:
+  value: 1024
+learning_rate:
+  value: 5.101083500805064e-06
+num_heads:
+  value: 1
+num_hidden:
+  value: 4
+optimizer:
+  value: sgd
+similarity_threshold:
+  value: 0.75

@@ -1,0 +1,178 @@
+2022-03-31 19:44:48,419 INFO    MainThread:22023 [internal.py:wandb_internal():92] W&B internal server running at pid: 22023, started at: 2022-03-31 19:44:48.419059
+2022-03-31 19:44:48,421 INFO    WriterThread:22023 [datastore.py:open_for_write():77] open: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_194447-3c4v26rg/run-3c4v26rg.wandb
+2022-03-31 19:44:48,424 DEBUG   SenderThread:22023 [sender.py:send():235] send: header
+2022-03-31 19:44:48,424 DEBUG   SenderThread:22023 [sender.py:send():235] send: run
+2022-03-31 19:44:48,755 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: check_version
+2022-03-31 19:44:48,756 INFO    SenderThread:22023 [dir_watcher.py:__init__():169] watching files in: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_194447-3c4v26rg/files
+2022-03-31 19:44:48,756 INFO    SenderThread:22023 [sender.py:_start_run_threads():812] run started: 3c4v26rg with start time 1648773887
+2022-03-31 19:44:48,756 DEBUG   SenderThread:22023 [sender.py:send():235] send: summary
+2022-03-31 19:44:48,756 INFO    SenderThread:22023 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-31 19:44:48,756 DEBUG   SenderThread:22023 [sender.py:send_request():249] send_request: check_version
+2022-03-31 19:44:48,791 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: run_start
+2022-03-31 19:44:48,794 DEBUG   HandlerThread:22023 [meta.py:__init__():37] meta init
+2022-03-31 19:44:48,794 DEBUG   HandlerThread:22023 [meta.py:__init__():51] meta init done
+2022-03-31 19:44:48,794 DEBUG   HandlerThread:22023 [meta.py:probe():211] probe
+2022-03-31 19:44:48,801 DEBUG   HandlerThread:22023 [meta.py:_setup_git():201] setup git
+2022-03-31 19:44:48,816 DEBUG   HandlerThread:22023 [meta.py:_setup_git():208] setup git done
+2022-03-31 19:44:48,817 DEBUG   HandlerThread:22023 [meta.py:_save_pip():55] save pip
+2022-03-31 19:44:48,817 DEBUG   HandlerThread:22023 [meta.py:_save_pip():69] save pip done
+2022-03-31 19:44:48,817 DEBUG   HandlerThread:22023 [meta.py:_save_conda():76] save conda
+2022-03-31 19:44:49,760 INFO    Thread-7  :22023 [dir_watcher.py:_on_file_created():217] file/dir created: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_194447-3c4v26rg/files/wandb-summary.json
+2022-03-31 19:44:49,760 INFO    Thread-7  :22023 [dir_watcher.py:_on_file_created():217] file/dir created: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_194447-3c4v26rg/files/requirements.txt
+2022-03-31 19:44:49,761 INFO    Thread-7  :22023 [dir_watcher.py:_on_file_created():217] file/dir created: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_194447-3c4v26rg/files/conda-environment.yaml
+2022-03-31 19:44:50,365 DEBUG   HandlerThread:22023 [meta.py:_save_conda():86] save conda done
+2022-03-31 19:44:50,365 DEBUG   HandlerThread:22023 [meta.py:probe():249] probe done
+2022-03-31 19:44:50,371 DEBUG   SenderThread:22023 [sender.py:send():235] send: files
+2022-03-31 19:44:50,372 INFO    SenderThread:22023 [sender.py:_save_file():947] saving file wandb-metadata.json with policy now
+2022-03-31 19:44:50,380 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-31 19:44:50,381 DEBUG   SenderThread:22023 [sender.py:send_request():249] send_request: stop_status
+2022-03-31 19:44:50,385 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 19:44:50,386 INFO    HandlerThread:22023 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 19:44:50,760 INFO    Thread-7  :22023 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_194447-3c4v26rg/files/conda-environment.yaml
+2022-03-31 19:44:50,760 INFO    Thread-7  :22023 [dir_watcher.py:_on_file_created():217] file/dir created: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_194447-3c4v26rg/files/output.log
+2022-03-31 19:44:50,760 INFO    Thread-7  :22023 [dir_watcher.py:_on_file_created():217] file/dir created: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_194447-3c4v26rg/files/wandb-metadata.json
+2022-03-31 19:44:50,856 DEBUG   SenderThread:22023 [sender.py:send():235] send: telemetry
+2022-03-31 19:44:50,857 DEBUG   SenderThread:22023 [sender.py:send():235] send: stats
+2022-03-31 19:44:51,246 INFO    Thread-11 :22023 [upload_job.py:push():137] Uploaded file /tmp/tmp3z58ahpdwandb/fg3milbq-wandb-metadata.json
+2022-03-31 19:44:52,262 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: resume
+2022-03-31 19:44:52,263 INFO    HandlerThread:22023 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-31 19:44:52,263 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 19:44:52,263 INFO    HandlerThread:22023 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 19:44:52,373 DEBUG   SenderThread:22023 [sender.py:send():235] send: stats
+2022-03-31 19:44:52,731 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: resume
+2022-03-31 19:44:52,731 INFO    HandlerThread:22023 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-31 19:44:52,732 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 19:44:52,732 INFO    HandlerThread:22023 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 19:44:52,848 DEBUG   SenderThread:22023 [sender.py:send():235] send: stats
+2022-03-31 19:44:53,490 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: resume
+2022-03-31 19:44:53,490 INFO    HandlerThread:22023 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-31 19:44:56,672 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 19:44:56,672 INFO    HandlerThread:22023 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 19:44:56,794 DEBUG   SenderThread:22023 [sender.py:send():235] send: stats
+2022-03-31 19:44:58,592 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: resume
+2022-03-31 19:44:58,605 INFO    HandlerThread:22023 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-31 19:44:59,227 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 19:44:59,227 INFO    HandlerThread:22023 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 19:44:59,332 DEBUG   SenderThread:22023 [sender.py:send():235] send: stats
+2022-03-31 19:45:05,858 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-31 19:45:05,858 DEBUG   SenderThread:22023 [sender.py:send_request():249] send_request: stop_status
+2022-03-31 19:45:06,301 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: resume
+2022-03-31 19:45:06,301 INFO    HandlerThread:22023 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-31 19:45:06,598 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 19:45:06,599 INFO    HandlerThread:22023 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 19:45:06,729 DEBUG   SenderThread:22023 [sender.py:send():235] send: stats
+2022-03-31 19:45:14,928 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: resume
+2022-03-31 19:45:14,928 INFO    HandlerThread:22023 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-31 19:45:14,928 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 19:45:14,928 INFO    HandlerThread:22023 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 19:45:15,053 DEBUG   SenderThread:22023 [sender.py:send():235] send: stats
+2022-03-31 19:45:16,523 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: resume
+2022-03-31 19:45:16,523 INFO    HandlerThread:22023 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-31 19:45:16,524 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: pause
+2022-03-31 19:45:16,524 INFO    HandlerThread:22023 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-31 19:45:16,628 DEBUG   SenderThread:22023 [sender.py:send():235] send: stats
+2022-03-31 19:45:19,273 WARNING MainThread:22023 [internal.py:wandb_internal():155] Internal process interrupt: 1
+2022-03-31 19:45:19,377 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-31 19:45:19,377 DEBUG   SenderThread:22023 [sender.py:send():235] send: telemetry
+2022-03-31 19:45:19,419 DEBUG   SenderThread:22023 [sender.py:send():235] send: exit
+2022-03-31 19:45:19,419 INFO    SenderThread:22023 [sender.py:send_exit():371] handling exit code: 0
+2022-03-31 19:45:19,419 INFO    SenderThread:22023 [sender.py:send_exit():373] handling runtime: 6
+2022-03-31 19:45:19,419 INFO    SenderThread:22023 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-31 19:45:19,420 INFO    SenderThread:22023 [sender.py:send_exit():379] send defer
+2022-03-31 19:45:19,420 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: defer
+2022-03-31 19:45:19,420 INFO    HandlerThread:22023 [handler.py:handle_request_defer():164] handle defer: 0
+2022-03-31 19:45:19,420 DEBUG   SenderThread:22023 [sender.py:send_request():249] send_request: defer
+2022-03-31 19:45:19,420 INFO    SenderThread:22023 [sender.py:send_request_defer():388] handle sender defer: 0
+2022-03-31 19:45:19,420 INFO    SenderThread:22023 [sender.py:transition_state():392] send defer: 1
+2022-03-31 19:45:19,420 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: defer
+2022-03-31 19:45:19,420 INFO    HandlerThread:22023 [handler.py:handle_request_defer():164] handle defer: 1
+2022-03-31 19:45:19,420 DEBUG   SenderThread:22023 [sender.py:send_request():249] send_request: defer
+2022-03-31 19:45:19,420 INFO    SenderThread:22023 [sender.py:send_request_defer():388] handle sender defer: 1
+2022-03-31 19:45:19,420 INFO    SenderThread:22023 [sender.py:transition_state():392] send defer: 2
+2022-03-31 19:45:19,421 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 19:45:19,421 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: defer
+2022-03-31 19:45:19,421 DEBUG   SenderThread:22023 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 19:45:19,421 INFO    HandlerThread:22023 [handler.py:handle_request_defer():164] handle defer: 2
+2022-03-31 19:45:19,421 DEBUG   SenderThread:22023 [sender.py:send_request():249] send_request: defer
+2022-03-31 19:45:19,421 INFO    SenderThread:22023 [sender.py:send_request_defer():388] handle sender defer: 2
+2022-03-31 19:45:19,421 INFO    SenderThread:22023 [sender.py:transition_state():392] send defer: 3
+2022-03-31 19:45:19,421 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: defer
+2022-03-31 19:45:19,421 INFO    HandlerThread:22023 [handler.py:handle_request_defer():164] handle defer: 3
+2022-03-31 19:45:19,422 DEBUG   SenderThread:22023 [sender.py:send_request():249] send_request: defer
+2022-03-31 19:45:19,422 INFO    SenderThread:22023 [sender.py:send_request_defer():388] handle sender defer: 3
+2022-03-31 19:45:19,422 INFO    SenderThread:22023 [sender.py:transition_state():392] send defer: 4
+2022-03-31 19:45:19,422 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: defer
+2022-03-31 19:45:19,422 INFO    HandlerThread:22023 [handler.py:handle_request_defer():164] handle defer: 4
+2022-03-31 19:45:19,422 DEBUG   SenderThread:22023 [sender.py:send():235] send: summary
+2022-03-31 19:45:19,422 INFO    SenderThread:22023 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-31 19:45:19,422 DEBUG   SenderThread:22023 [sender.py:send_request():249] send_request: defer
+2022-03-31 19:45:19,422 INFO    SenderThread:22023 [sender.py:send_request_defer():388] handle sender defer: 4
+2022-03-31 19:45:19,423 INFO    SenderThread:22023 [sender.py:transition_state():392] send defer: 5
+2022-03-31 19:45:19,423 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: defer
+2022-03-31 19:45:19,423 INFO    HandlerThread:22023 [handler.py:handle_request_defer():164] handle defer: 5
+2022-03-31 19:45:19,423 DEBUG   SenderThread:22023 [sender.py:send_request():249] send_request: defer
+2022-03-31 19:45:19,423 INFO    SenderThread:22023 [sender.py:send_request_defer():388] handle sender defer: 5
+2022-03-31 19:45:19,525 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 19:45:19,770 INFO    Thread-7  :22023 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_194447-3c4v26rg/files/config.yaml
+2022-03-31 19:45:19,771 INFO    Thread-7  :22023 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_194447-3c4v26rg/files/wandb-summary.json
+2022-03-31 19:45:19,800 INFO    SenderThread:22023 [sender.py:transition_state():392] send defer: 6
+2022-03-31 19:45:19,800 DEBUG   SenderThread:22023 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 19:45:19,800 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: defer
+2022-03-31 19:45:19,801 INFO    HandlerThread:22023 [handler.py:handle_request_defer():164] handle defer: 6
+2022-03-31 19:45:19,801 DEBUG   SenderThread:22023 [sender.py:send_request():249] send_request: defer
+2022-03-31 19:45:19,801 INFO    SenderThread:22023 [sender.py:send_request_defer():388] handle sender defer: 6
+2022-03-31 19:45:19,801 INFO    SenderThread:22023 [dir_watcher.py:finish():283] shutting down directory watcher
+2022-03-31 19:45:19,902 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 19:45:20,771 INFO    Thread-7  :22023 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_194447-3c4v26rg/files/config.yaml
+2022-03-31 19:45:20,771 INFO    SenderThread:22023 [dir_watcher.py:finish():313] scan: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_194447-3c4v26rg/files
+2022-03-31 19:45:20,771 INFO    SenderThread:22023 [dir_watcher.py:finish():327] scan save: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_194447-3c4v26rg/files/config.yaml config.yaml
+2022-03-31 19:45:20,771 INFO    SenderThread:22023 [dir_watcher.py:finish():327] scan save: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_194447-3c4v26rg/files/output.log output.log
+2022-03-31 19:45:20,772 INFO    SenderThread:22023 [dir_watcher.py:finish():327] scan save: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_194447-3c4v26rg/files/wandb-summary.json wandb-summary.json
+2022-03-31 19:45:20,774 INFO    SenderThread:22023 [dir_watcher.py:finish():327] scan save: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_194447-3c4v26rg/files/requirements.txt requirements.txt
+2022-03-31 19:45:20,776 INFO    SenderThread:22023 [dir_watcher.py:finish():327] scan save: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_194447-3c4v26rg/files/wandb-metadata.json wandb-metadata.json
+2022-03-31 19:45:20,776 INFO    SenderThread:22023 [dir_watcher.py:finish():327] scan save: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_194447-3c4v26rg/files/conda-environment.yaml conda-environment.yaml
+2022-03-31 19:45:20,778 INFO    SenderThread:22023 [sender.py:transition_state():392] send defer: 7
+2022-03-31 19:45:20,779 DEBUG   SenderThread:22023 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 19:45:20,781 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: defer
+2022-03-31 19:45:20,781 INFO    HandlerThread:22023 [handler.py:handle_request_defer():164] handle defer: 7
+2022-03-31 19:45:20,782 DEBUG   SenderThread:22023 [sender.py:send_request():249] send_request: defer
+2022-03-31 19:45:20,782 INFO    SenderThread:22023 [sender.py:send_request_defer():388] handle sender defer: 7
+2022-03-31 19:45:20,782 INFO    SenderThread:22023 [file_pusher.py:finish():145] shutting down file pusher
+2022-03-31 19:45:20,881 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 19:45:20,881 DEBUG   SenderThread:22023 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 19:45:20,983 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 19:45:20,983 DEBUG   SenderThread:22023 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 19:45:21,085 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 19:45:21,085 DEBUG   SenderThread:22023 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 19:45:21,187 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 19:45:21,187 DEBUG   SenderThread:22023 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 19:45:21,289 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 19:45:21,289 DEBUG   SenderThread:22023 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 19:45:21,391 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 19:45:21,392 DEBUG   SenderThread:22023 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 19:45:21,494 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 19:45:21,494 DEBUG   SenderThread:22023 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 19:45:21,596 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 19:45:21,596 DEBUG   SenderThread:22023 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 19:45:21,624 INFO    Thread-19 :22023 [upload_job.py:push():137] Uploaded file /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_194447-3c4v26rg/files/config.yaml
+2022-03-31 19:45:21,692 INFO    Thread-22 :22023 [upload_job.py:push():137] Uploaded file /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_194447-3c4v26rg/files/conda-environment.yaml
+2022-03-31 19:45:21,698 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-31 19:45:21,698 DEBUG   SenderThread:22023 [sender.py:send_request():249] send_request: poll_exit
+2022-03-31 19:45:21,719 INFO    Thread-20 :22023 [upload_job.py:push():137] Uploaded file /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_194447-3c4v26rg/files/wandb-summary.json
+2022-03-31 19:45:21,725 INFO    Thread-21 :22023 [upload_job.py:push():137] Uploaded file /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_194447-3c4v26rg/files/requirements.txt
+2022-03-31 19:45:21,926 INFO    Thread-6  :22023 [sender.py:transition_state():392] send defer: 8
+2022-03-31 19:45:21,927 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: defer
+2022-03-31 19:45:21,927 INFO    HandlerThread:22023 [handler.py:handle_request_defer():164] handle defer: 8
+2022-03-31 19:45:21,927 DEBUG   SenderThread:22023 [sender.py:send_request():249] send_request: defer
+2022-03-31 19:45:21,927 INFO    SenderThread:22023 [sender.py:send_request_defer():388] handle sender defer: 8
+2022-03-31 19:45:22,276 WARNING MainThread:22023 [internal.py:is_dead():387] Internal process exiting, parent pid 21870 disappeared
+2022-03-31 19:45:22,276 ERROR   MainThread:22023 [internal.py:wandb_internal():151] Internal process shutdown.
+2022-03-31 19:45:22,422 INFO    WriterThread:22023 [datastore.py:close():281] close: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220331_194447-3c4v26rg/run-3c4v26rg.wandb
+2022-03-31 19:45:22,620 INFO    SenderThread:22023 [sender.py:transition_state():392] send defer: 9
+2022-03-31 19:45:22,620 INFO    SenderThread:22023 [sender.py:finish():1078] shutting down sender
+2022-03-31 19:45:22,620 INFO    SenderThread:22023 [file_pusher.py:finish():145] shutting down file pusher
+2022-03-31 19:45:22,620 DEBUG   HandlerThread:22023 [handler.py:handle_request():141] handle_request: defer
+2022-03-31 19:45:22,620 INFO    SenderThread:22023 [file_pusher.py:join():150] waiting for file pusher
+2022-03-31 19:45:22,621 INFO    HandlerThread:22023 [handler.py:handle_request_defer():164] handle defer: 9
+2022-03-31 19:45:22,621 INFO    HandlerThread:22023 [handler.py:finish():778] shutting down handler
+2022-03-31 19:45:22,623 INFO    MainThread:22023 [internal.py:handle_exit():82] Internal process exited

@@ -1,0 +1,26 @@
+{
+    "os": "Linux-5.4.0-99-generic-x86_64-with-glibc2.27",
+    "python": "3.9.7",
+    "heartbeatAt": "2022-04-01T00:25:39.108649",
+    "startedAt": "2022-04-01T00:25:38.222389",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "gpu_count": 4,
+    "cpu_count": 24,
+    "cuda": null,
+    "args": [
+        "-f",
+        "/home/ltorres/.local/share/jupyter/runtime/kernel-f46ce343-14f4-4511-ad9f-a8ebde6e9632.json"
+    ],
+    "state": "running",
+    "program": "leo/tesis/cloud-classification/code/notebooks/new wandb GNN.ipynb",
+    "root": "/home/ltorres/leo/tesis/cloud-classification",
+    "git": {
+        "remote": "https://github.com/TheBlueStuff/cloud-classification.git",
+        "commit": "f3b44069a0fa8e06ebb29fffd597b7bc4a2c2b51"
+    },
+    "email": "leonardtd@gmail.com",
+    "host": "discovery",
+    "username": "ltorres",
+    "executable": "/home/ltorres/miniconda3/bin/python"
+}

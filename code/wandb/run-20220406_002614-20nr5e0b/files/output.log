@@ -1,0 +1,830 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 313/313 [00:59<00:00,  5.30it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 313/313 [00:57<00:00,  5.40it/s]
+
+
+
+
+
+
+
+
+
+100%|██████████| 282/282 [00:18<00:00, 15.24it/s]
+Saved best parameters at epoch 1
+EPOCH 1: Train acc: 77.49% Train Loss: 1.6669 Test acc: 72.44% Test Loss: 1.6555
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 313/313 [00:59<00:00,  5.28it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 313/313 [00:57<00:00,  5.41it/s]
+
+
+
+
+
+
+
+
+
+ 99%|█████████▉| 279/282 [00:18<00:00, 15.90it/s]
+Saved best parameters at epoch 2
+100%|██████████| 282/282 [00:18<00:00, 15.27it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 313/313 [00:59<00:00,  5.27it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 313/313 [00:57<00:00,  5.41it/s]
+
+
+
+
+
+
+
+
+
+ 98%|█████████▊| 275/282 [00:18<00:00, 15.56it/s]
+Saved best parameters at epoch 3
+100%|██████████| 282/282 [00:18<00:00, 15.26it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 313/313 [00:59<00:00,  5.29it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 313/313 [00:57<00:00,  5.40it/s]
+
+
+
+
+
+
+
+
+
+ 99%|█████████▉| 279/282 [00:18<00:00, 15.91it/s]
+Saved best parameters at epoch 4
+100%|██████████| 282/282 [00:18<00:00, 15.33it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 313/313 [00:59<00:00,  5.29it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 313/313 [00:57<00:00,  5.40it/s]
+
+
+
+
+
+
+
+
+ 95%|█████████▌| 269/282 [00:17<00:00, 15.64it/s]
+100%|██████████| 282/282 [00:18<00:00, 15.22it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 313/313 [00:59<00:00,  5.23it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 313/313 [00:57<00:00,  5.40it/s]
+
+
+
+
+
+
+
+
+ 94%|█████████▍| 265/282 [00:17<00:01, 15.66it/s]
+100%|██████████| 282/282 [00:18<00:00, 15.27it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 313/313 [00:59<00:00,  5.29it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 313/313 [00:58<00:00,  5.39it/s]
+
+
+
+
+
+
+
+
+
+ 98%|█████████▊| 275/282 [00:18<00:00, 15.63it/s]
+100%|██████████| 282/282 [00:18<00:00, 15.25it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 313/313 [00:59<00:00,  5.28it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 313/313 [00:58<00:00,  5.38it/s]
+
+
+
+
+
+
+
+
+
+ 99%|█████████▉| 279/282 [00:18<00:00, 15.83it/s]
+100%|██████████| 282/282 [00:18<00:00, 15.33it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 313/313 [00:59<00:00,  5.29it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 313/313 [00:57<00:00,  5.40it/s]
+
+
+
+
+
+
+
+
+ 93%|█████████▎| 261/282 [00:17<00:01, 15.37it/s]
+100%|██████████| 282/282 [00:18<00:00, 15.24it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 313/313 [00:59<00:00,  5.28it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 313/313 [00:58<00:00,  5.40it/s]
+
+
+
+
+
+
+
+
+ 94%|█████████▍| 265/282 [00:17<00:01, 15.67it/s]
+100%|██████████| 282/282 [00:18<00:00, 15.29it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 313/313 [00:59<00:00,  5.28it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 313/313 [00:57<00:00,  5.40it/s]
+
+
+
+
+
+
+
+
+
+ 98%|█████████▊| 277/282 [00:18<00:00, 15.97it/s]
+100%|██████████| 282/282 [00:18<00:00, 15.29it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 95%|█████████▌| 298/313 [00:56<00:02,  5.27it/s]
+Exception in thread NetStatThr:
+Traceback (most recent call last):
+  File "/home/ltorres/miniconda3/lib/python3.9/threading.py", line 973, in _bootstrap_inner
+    self.run()
+  File "/home/ltorres/miniconda3/lib/python3.9/threading.py", line 910, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 149, in check_network_status
+    status_response = self._interface.communicate_network_status()
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface.py", line 125, in communicate_network_status
+    resp = self._communicate_network_status(status)
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 397, in _communicate_network_status
+    resp = self._communicate(req, local=True)
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 222, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 227, in _communicate_async
+    raise Exception("The wandb backend process has shutdown")
+Exception: The wandb backend process has shutdown
+Exception in thread ChkStopThr:
+Traceback (most recent call last):
+  File "/home/ltorres/miniconda3/lib/python3.9/threading.py", line 973, in _bootstrap_inner
+    self.run()
+  File "/home/ltorres/miniconda3/lib/python3.9/threading.py", line 910, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 167, in check_status
+    status_response = self._interface.communicate_stop_status()
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface.py", line 114, in communicate_stop_status
+    resp = self._communicate_stop_status(status)
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 387, in _communicate_stop_status
+    resp = self._communicate(req, local=True)
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 222, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 227, in _communicate_async
+    raise Exception("The wandb backend process has shutdown")
+Exception: The wandb backend process has shutdown
+Error in callback <function _WandbInit._resume_backend at 0x7fa4a8dbc1f0> (for pre_run_cell):
+Error in callback <function _WandbInit._pause_backend at 0x7fa4a8dbc3a0> (for post_run_cell):
+Error in callback <function _WandbInit._resume_backend at 0x7fa4a8dbc1f0> (for pre_run_cell):
+Error in callback <function _WandbInit._pause_backend at 0x7fa4a8dbc3a0> (for post_run_cell):

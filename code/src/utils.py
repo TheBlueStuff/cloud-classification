@@ -29,6 +29,12 @@ def get_gcd_paths(data_dir, dataset_type):
                      recursive=True
                     )
 
+def get_grscd_paths(data_dir, dataset_type):
+    return glob.glob(
+                     os.path.join(data_dir,f'GRSCD/{dataset_type}/**/*.jpg'), 
+                     recursive=True
+                    )
+
 def get_ccsn_paths(data_dir):
     return glob.glob(
                      os.path.join(data_dir,f'CCSN_v2/**/*.jpg'), 

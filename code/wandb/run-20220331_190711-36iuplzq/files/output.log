@@ -1,0 +1,125 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 47%|████▋     | 146/313 [00:26<00:30,  5.41it/s]
+ 49%|████▉     | 154/313 [00:28<00:28,  5.53it/s]
+
+
+
+
+
+
+
+
+ 91%|█████████ | 257/282 [00:16<00:01, 16.07it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 96%|█████████▌| 301/313 [01:12<00:02,  5.46it/s]
+ 99%|█████████▊| 309/313 [01:14<00:00,  5.52it/s]
+
+
+
+
+
+
+
+
+ 92%|█████████▏| 259/282 [00:16<00:01, 15.99it/s]
+
+100%|██████████| 313/313 [01:33<00:00,  3.36it/s]
+
+
+
+
+
+
+ 24%|██▍       | 76/313 [00:13<00:43,  5.45it/s]
+154
+309
+Epoch [1/100], Step [155/313], Loss: 2.7598
+Epoch [1/100], test Loss: 0.0172
+Epoch [1/100], Step [310/313], Loss: 1.4650
+Epoch [1/100], test Loss: 0.0167
+Epoch [2/100], Step [155/313], Loss: 1.3297
+Epoch [2/100], test Loss: 0.0166
+Epoch [2/100], Step [310/313], Loss: 1.3047
+Epoch [2/100], test Loss: 0.0170
+Epoch [3/100], Step [155/313], Loss: 1.0148
+Epoch [3/100], test Loss: 0.0160
+Epoch [3/100], Step [310/313], Loss: 1.1347
+Epoch [3/100], test Loss: 0.0161
+Epoch [4/100], Step [155/313], Loss: 1.0262
+Epoch [4/100], test Loss: 0.0168
+Epoch [4/100], Step [310/313], Loss: 0.5337
+Epoch [4/100], test Loss: 0.0154
+Epoch [5/100], Step [155/313], Loss: 0.4768
+Epoch [5/100], test Loss: 0.0156
+Epoch [5/100], Step [310/313], Loss: 1.1579
+Epoch [5/100], test Loss: 0.0161
+Epoch [6/100], Step [155/313], Loss: 0.8679
+Epoch [6/100], test Loss: 0.0159
+Epoch [6/100], Step [310/313], Loss: 0.2259
+Epoch [6/100], test Loss: 0.0160
+Exception in thread ChkStopThr:
+Traceback (most recent call last):
+  File "/home/ltorres/miniconda3/lib/python3.9/threading.py", line 973, in _bootstrap_inner
+    self.run()
+  File "/home/ltorres/miniconda3/lib/python3.9/threading.py", line 910, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 167, in check_status
+    status_response = self._interface.communicate_stop_status()
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface.py", line 114, in communicate_stop_status
+    resp = self._communicate_stop_status(status)
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 387, in _communicate_stop_status
+    resp = self._communicate(req, local=True)
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 222, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 227, in _communicate_async
+    raise Exception("The wandb backend process has shutdown")
+Exception: The wandb backend process has shutdown
+Exception in thread NetStatThr:
+Traceback (most recent call last):
+  File "/home/ltorres/miniconda3/lib/python3.9/threading.py", line 973, in _bootstrap_inner
+    self.run()
+  File "/home/ltorres/miniconda3/lib/python3.9/threading.py", line 910, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 149, in check_network_status
+    status_response = self._interface.communicate_network_status()
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface.py", line 125, in communicate_network_status
+    resp = self._communicate_network_status(status)
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 397, in _communicate_network_status
+    resp = self._communicate(req, local=True)
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 222, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "/home/ltorres/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 227, in _communicate_async
+    raise Exception("The wandb backend process has shutdown")
+Exception: The wandb backend process has shutdown
+Error in callback <function _WandbInit._resume_backend at 0x7f45237490d0> (for pre_run_cell):
+Error in callback <function _WandbInit._pause_backend at 0x7f4523749160> (for post_run_cell):
+Error in callback <function _WandbInit._resume_backend at 0x7f45237490d0> (for pre_run_cell):
+Error in callback <function _WandbInit._pause_backend at 0x7f4523749160> (for post_run_cell):
+Error in callback <function _WandbInit._resume_backend at 0x7f45237490d0> (for pre_run_cell):
+Error in callback <function _WandbInit._pause_backend at 0x7f4523749160> (for post_run_cell):

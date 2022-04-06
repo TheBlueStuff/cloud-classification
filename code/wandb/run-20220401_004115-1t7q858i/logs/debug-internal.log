@@ -1,0 +1,134 @@
+2022-04-01 00:41:15,741 INFO    MainThread:25327 [internal.py:wandb_internal():92] W&B internal server running at pid: 25327, started at: 2022-04-01 00:41:15.741447
+2022-04-01 00:41:15,744 INFO    WriterThread:25327 [datastore.py:open_for_write():77] open: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/run-1t7q858i.wandb
+2022-04-01 00:41:15,747 DEBUG   SenderThread:25327 [sender.py:send():235] send: header
+2022-04-01 00:41:15,747 DEBUG   SenderThread:25327 [sender.py:send():235] send: run
+2022-04-01 00:41:16,088 DEBUG   HandlerThread:25327 [handler.py:handle_request():141] handle_request: check_version
+2022-04-01 00:41:16,089 INFO    SenderThread:25327 [dir_watcher.py:__init__():169] watching files in: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files
+2022-04-01 00:41:16,089 INFO    SenderThread:25327 [sender.py:_start_run_threads():812] run started: 1t7q858i with start time 1648791675
+2022-04-01 00:41:16,089 DEBUG   SenderThread:25327 [sender.py:send():235] send: summary
+2022-04-01 00:41:16,090 INFO    SenderThread:25327 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-01 00:41:16,090 DEBUG   SenderThread:25327 [sender.py:send_request():249] send_request: check_version
+2022-04-01 00:41:16,138 DEBUG   HandlerThread:25327 [handler.py:handle_request():141] handle_request: run_start
+2022-04-01 00:41:16,146 DEBUG   HandlerThread:25327 [meta.py:__init__():37] meta init
+2022-04-01 00:41:16,146 DEBUG   HandlerThread:25327 [meta.py:__init__():51] meta init done
+2022-04-01 00:41:16,146 DEBUG   HandlerThread:25327 [meta.py:probe():211] probe
+2022-04-01 00:41:16,154 DEBUG   HandlerThread:25327 [meta.py:_setup_git():201] setup git
+2022-04-01 00:41:16,178 DEBUG   HandlerThread:25327 [meta.py:_setup_git():208] setup git done
+2022-04-01 00:41:16,178 DEBUG   HandlerThread:25327 [meta.py:_save_pip():55] save pip
+2022-04-01 00:41:16,179 DEBUG   HandlerThread:25327 [meta.py:_save_pip():69] save pip done
+2022-04-01 00:41:16,179 DEBUG   HandlerThread:25327 [meta.py:_save_conda():76] save conda
+2022-04-01 00:41:17,094 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_created():217] file/dir created: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/wandb-summary.json
+2022-04-01 00:41:17,095 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_created():217] file/dir created: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/conda-environment.yaml
+2022-04-01 00:41:17,095 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_created():217] file/dir created: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/requirements.txt
+2022-04-01 00:41:17,695 DEBUG   HandlerThread:25327 [meta.py:_save_conda():86] save conda done
+2022-04-01 00:41:17,695 DEBUG   HandlerThread:25327 [meta.py:probe():249] probe done
+2022-04-01 00:41:17,702 DEBUG   SenderThread:25327 [sender.py:send():235] send: files
+2022-04-01 00:41:17,702 INFO    SenderThread:25327 [sender.py:_save_file():947] saving file wandb-metadata.json with policy now
+2022-04-01 00:41:17,716 DEBUG   HandlerThread:25327 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-01 00:41:17,717 DEBUG   SenderThread:25327 [sender.py:send_request():249] send_request: stop_status
+2022-04-01 00:41:17,730 DEBUG   HandlerThread:25327 [handler.py:handle_request():141] handle_request: pause
+2022-04-01 00:41:17,730 INFO    HandlerThread:25327 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-04-01 00:41:17,855 DEBUG   HandlerThread:25327 [handler.py:handle_request():141] handle_request: resume
+2022-04-01 00:41:17,855 INFO    HandlerThread:25327 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-04-01 00:41:17,855 DEBUG   HandlerThread:25327 [handler.py:handle_request():141] handle_request: pause
+2022-04-01 00:41:17,855 INFO    HandlerThread:25327 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-04-01 00:41:17,970 DEBUG   HandlerThread:25327 [handler.py:handle_request():141] handle_request: resume
+2022-04-01 00:41:17,970 INFO    HandlerThread:25327 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-04-01 00:41:17,971 DEBUG   HandlerThread:25327 [handler.py:handle_request():141] handle_request: pause
+2022-04-01 00:41:17,971 INFO    HandlerThread:25327 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-04-01 00:41:17,985 DEBUG   SenderThread:25327 [sender.py:send():235] send: telemetry
+2022-04-01 00:41:18,093 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/conda-environment.yaml
+2022-04-01 00:41:18,094 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_created():217] file/dir created: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/wandb-metadata.json
+2022-04-01 00:41:18,094 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_created():217] file/dir created: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log
+2022-04-01 00:41:18,096 DEBUG   HandlerThread:25327 [handler.py:handle_request():141] handle_request: resume
+2022-04-01 00:41:18,097 INFO    HandlerThread:25327 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-04-01 00:41:18,097 DEBUG   SenderThread:25327 [sender.py:send():235] send: stats
+2022-04-01 00:41:18,098 DEBUG   SenderThread:25327 [sender.py:send():235] send: stats
+2022-04-01 00:41:18,099 DEBUG   SenderThread:25327 [sender.py:send():235] send: stats
+2022-04-01 00:41:18,841 INFO    Thread-11 :25327 [upload_job.py:push():137] Uploaded file /tmp/tmpb4i0vva9wandb/2c29oucg-wandb-metadata.json
+2022-04-01 00:41:20,145 DEBUG   HandlerThread:25327 [handler.py:handle_request():141] handle_request: pause
+2022-04-01 00:41:20,146 INFO    HandlerThread:25327 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-04-01 00:41:20,226 DEBUG   HandlerThread:25327 [handler.py:handle_request():141] handle_request: resume
+2022-04-01 00:41:20,226 INFO    HandlerThread:25327 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-04-01 00:41:20,227 DEBUG   HandlerThread:25327 [handler.py:handle_request():141] handle_request: pause
+2022-04-01 00:41:20,227 INFO    HandlerThread:25327 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-04-01 00:41:20,337 DEBUG   HandlerThread:25327 [handler.py:handle_request():141] handle_request: resume
+2022-04-01 00:41:20,337 INFO    HandlerThread:25327 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-04-01 00:41:20,337 DEBUG   HandlerThread:25327 [handler.py:handle_request():141] handle_request: pause
+2022-04-01 00:41:20,337 INFO    HandlerThread:25327 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-04-01 00:41:20,476 DEBUG   HandlerThread:25327 [handler.py:handle_request():141] handle_request: resume
+2022-04-01 00:41:20,476 DEBUG   SenderThread:25327 [sender.py:send():235] send: stats
+2022-04-01 00:41:20,477 INFO    HandlerThread:25327 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-04-01 00:41:20,479 DEBUG   HandlerThread:25327 [handler.py:handle_request():141] handle_request: pause
+2022-04-01 00:41:20,479 INFO    HandlerThread:25327 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-04-01 00:41:20,629 DEBUG   HandlerThread:25327 [handler.py:handle_request():141] handle_request: resume
+2022-04-01 00:41:20,630 INFO    HandlerThread:25327 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-04-01 00:41:20,630 DEBUG   HandlerThread:25327 [handler.py:handle_request():141] handle_request: pause
+2022-04-01 00:41:20,630 INFO    HandlerThread:25327 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-04-01 00:41:20,760 DEBUG   HandlerThread:25327 [handler.py:handle_request():141] handle_request: resume
+2022-04-01 00:41:20,761 INFO    HandlerThread:25327 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-04-01 00:41:20,761 DEBUG   HandlerThread:25327 [handler.py:handle_request():141] handle_request: pause
+2022-04-01 00:41:20,761 INFO    HandlerThread:25327 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-04-01 00:41:20,890 DEBUG   HandlerThread:25327 [handler.py:handle_request():141] handle_request: resume
+2022-04-01 00:41:20,890 INFO    HandlerThread:25327 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-04-01 00:41:20,891 DEBUG   SenderThread:25327 [sender.py:send():235] send: stats
+2022-04-01 00:41:20,892 DEBUG   SenderThread:25327 [sender.py:send():235] send: stats
+2022-04-01 00:41:20,893 DEBUG   SenderThread:25327 [sender.py:send():235] send: stats
+2022-04-01 00:41:20,893 DEBUG   SenderThread:25327 [sender.py:send():235] send: stats
+2022-04-01 00:41:20,894 DEBUG   SenderThread:25327 [sender.py:send():235] send: stats
+2022-04-01 00:41:22,095 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log
+2022-04-01 00:41:24,096 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log
+2022-04-01 00:41:26,097 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log
+2022-04-01 00:41:28,098 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log
+2022-04-01 00:41:30,099 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log
+2022-04-01 00:41:32,100 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log
+2022-04-01 00:41:32,986 DEBUG   HandlerThread:25327 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-01 00:41:32,987 DEBUG   SenderThread:25327 [sender.py:send_request():249] send_request: stop_status
+2022-04-01 00:41:34,101 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log
+2022-04-01 00:41:36,102 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log
+2022-04-01 00:41:38,103 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log
+2022-04-01 00:41:40,104 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log
+2022-04-01 00:41:42,105 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log
+2022-04-01 00:41:44,106 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log
+2022-04-01 00:41:46,107 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log
+2022-04-01 00:41:46,108 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/config.yaml
+2022-04-01 00:41:48,108 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log
+2022-04-01 00:41:48,255 DEBUG   HandlerThread:25327 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-01 00:41:48,255 DEBUG   SenderThread:25327 [sender.py:send_request():249] send_request: stop_status
+2022-04-01 00:41:50,051 DEBUG   SenderThread:25327 [sender.py:send():235] send: stats
+2022-04-01 00:41:50,109 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log
+2022-04-01 00:41:52,110 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log
+2022-04-01 00:41:54,112 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log
+2022-04-01 00:41:56,113 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log
+2022-04-01 00:41:58,114 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log
+2022-04-01 00:42:00,115 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log
+2022-04-01 00:42:02,116 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log
+2022-04-01 00:42:03,528 DEBUG   HandlerThread:25327 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-01 00:42:03,528 DEBUG   SenderThread:25327 [sender.py:send_request():249] send_request: stop_status
+2022-04-01 00:42:04,117 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log
+2022-04-01 00:42:04,144 WARNING MainThread:25327 [internal.py:wandb_internal():155] Internal process interrupt: 1
+2022-04-01 00:42:04,809 DEBUG   HandlerThread:25327 [handler.py:handle_request():141] handle_request: pause
+2022-04-01 00:42:04,809 INFO    HandlerThread:25327 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-04-01 00:42:04,913 DEBUG   SenderThread:25327 [sender.py:send():235] send: stats
+2022-04-01 00:42:06,118 INFO    Thread-7  :25327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log
+2022-04-01 00:42:06,704 WARNING MainThread:25327 [internal.py:wandb_internal():155] Internal process interrupt: 2
+2022-04-01 00:42:06,704 ERROR   MainThread:25327 [internal.py:wandb_internal():158] Internal process interrupted.
+2022-04-01 00:42:06,789 INFO    SenderThread:25327 [sender.py:finish():1078] shutting down sender
+2022-04-01 00:42:06,790 INFO    WriterThread:25327 [datastore.py:close():281] close: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/run-1t7q858i.wandb
+2022-04-01 00:42:06,790 INFO    SenderThread:25327 [dir_watcher.py:finish():283] shutting down directory watcher
+2022-04-01 00:42:06,790 INFO    HandlerThread:25327 [handler.py:finish():778] shutting down handler
+2022-04-01 00:42:07,119 INFO    SenderThread:25327 [dir_watcher.py:finish():313] scan: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files
+2022-04-01 00:42:07,119 INFO    SenderThread:25327 [dir_watcher.py:finish():327] scan save: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/config.yaml config.yaml
+2022-04-01 00:42:07,119 INFO    SenderThread:25327 [dir_watcher.py:finish():327] scan save: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log output.log
+2022-04-01 00:42:07,120 INFO    SenderThread:25327 [dir_watcher.py:finish():327] scan save: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/wandb-summary.json wandb-summary.json
+2022-04-01 00:42:07,130 INFO    SenderThread:25327 [dir_watcher.py:finish():327] scan save: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/requirements.txt requirements.txt
+2022-04-01 00:42:07,137 INFO    SenderThread:25327 [dir_watcher.py:finish():327] scan save: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/wandb-metadata.json wandb-metadata.json
+2022-04-01 00:42:07,137 INFO    SenderThread:25327 [dir_watcher.py:finish():327] scan save: /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/conda-environment.yaml conda-environment.yaml
+2022-04-01 00:42:07,143 INFO    SenderThread:25327 [file_pusher.py:finish():145] shutting down file pusher
+2022-04-01 00:42:07,143 INFO    SenderThread:25327 [file_pusher.py:join():150] waiting for file pusher
+2022-04-01 00:42:08,127 INFO    Thread-24 :25327 [upload_job.py:push():137] Uploaded file /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/requirements.txt
+2022-04-01 00:42:08,150 INFO    Thread-21 :25327 [upload_job.py:push():137] Uploaded file /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/config.yaml
+2022-04-01 00:42:08,167 INFO    Thread-23 :25327 [upload_job.py:push():137] Uploaded file /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/wandb-summary.json
+2022-04-01 00:42:08,184 INFO    Thread-22 :25327 [upload_job.py:push():137] Uploaded file /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/output.log
+2022-04-01 00:42:09,194 INFO    Thread-25 :25327 [upload_job.py:push():137] Uploaded file /home/ltorres/leo/tesis/cloud-classification/code/wandb/run-20220401_004115-1t7q858i/files/conda-environment.yaml
+2022-04-01 00:42:09,790 INFO    MainThread:25327 [internal.py:handle_exit():82] Internal process exited
