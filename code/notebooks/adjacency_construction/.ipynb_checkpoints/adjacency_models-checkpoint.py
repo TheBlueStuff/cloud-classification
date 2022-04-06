@@ -5,6 +5,7 @@ from torch.nn import functional as F
 from torchvision import models
 import dgl
 from dgl.nn import GATConv, GraphConv
+import numpy as np
 
 
 def normalize_features(dfs):
@@ -16,10 +17,17 @@ def build_graph_cosine_similarity(dfs, threshold):
 
     sim_matrix = batch_nodes @ batch_nodes.T
     adj_matrix = torch.where(sim_matrix > threshold, 1, 0)
-        
+    
     row, col = torch.where(adj_matrix==1)
-
+ 
     return dgl.graph((row, col))
+
+def build_graph_cosine_similarity_fullyconnected(dfs, threshold):
+    adj_matrix = torch.ones(dfs.shape[0], dfs.shape[0])
+    row, col = torch.where(adj_matrix==1)
+ 
+    return dgl.graph((row, col))
+    
 
 def build_graph_pearson_similarity(dfs, threshold):
     corr_matrix = torch.corrcoef(dfs)
@@ -42,14 +50,14 @@ class MLPBuilder(nn.Module):
         
     def forward(self, x):
         
-        # All against all concat
+        # All against all
         
         left = x.repeat_interleave(x.shape[0], dim=0)
         right = x.repeat(x.shape[0],1)
-                
-        cat_tensor = torch.cat([left,right], dim=1)
         
-        out = self.mlp(cat_tensor)
+        out = left * right # element wise 
+        
+        out = self.mlp(out)
         
         out = F.softmax(out, dim=1)
         out = torch.argmax(out, dim=1)
@@ -97,28 +105,87 @@ class AttentionBuilder(nn.Module):
         keys = keys.view(heads,t,h)
         values = values.view(heads,t,h)
         
-        dot = torch.bmm(queries, keys.transpose(1,2))/torch.sqrt(h) #hxtxt
+        dot = torch.bmm(queries, keys.transpose(1,2))/np.sqrt(h) #hxtxt
         dot = F.softmax(dot, dim=2) #self attention probs
         
         out = torch.bmm(dot, values).view(t,heads*h)
-        
+
         return self.unify_heads(out)     
         
     def build_graph(self, x, threshold):
+        x = self.forward(x)
         return build_graph_cosine_similarity(x, threshold)
     
 
-
-class GATConvGNN(nn.Module):
-    def __init__(self, num_classes, hidden_dim, num_hidden, num_heads, threshold, adjacency_builder = 'cos_sim'):
+class TransformerBlock(nn.Module):
+    def __init__(self, in_dims, hidden, num_heads=4):
         super().__init__()
-
+        
+        self.mha = AttentionBuilder(in_dims, hidden, num_heads)
+        self.linear = nn.Linear(in_dims, hidden)
+        
+        self.feed_forward = nn.Sequential(
+                                nn.Linear(hidden, hidden),
+                                nn.ReLU(),
+                                nn.Linear(hidden, hidden),
+                            )
+        
+        self.norm_1 = nn.LayerNorm(hidden)
+        self.norm_2 = nn.LayerNorm(hidden)
+        
+        
+    def forward(self, x):
+        out_att = self.mha(x)
+        out_lin = self.linear(x)
+        
+        out_norm_1 = self.norm_1(out_att + out_lin)
+        
+        out = self.feed_forward(out_norm_1)
+        out = self.norm_2(out+out_norm_1)
+        
+        out = F.dropout(out, 0.1, training=self.training)
+  
+        return out
+    
+    
+class TransformerBuilder(nn.Module):
+    def __init__(self, in_dims, hidden, num_heads=4, num_blocks=4):
+        super().__init__()
+        
+        self.blocks = nn.ModuleList()
+        
+        self.blocks.append(TransformerBlock(in_dims, hidden, num_heads))
+        
+        for i in range(num_blocks-1):
+            self.blocks.append(TransformerBlock(hidden, hidden, num_heads)) 
+            
+        print('Transformer has {} blocks'.format(len(self.blocks)))
+        
+    def forward(self, x):
+        for i,block in enumerate(self.blocks[:-1]):
+            x = F.relu(block(x))
+        
+        x = self.blocks[-1](x)
+       
+        return x
+    
+    def build_graph(self, x, threshold):
+        x = self.forward(x)
+        return build_graph_cosine_similarity(x, threshold)
+                
+        
+class GATConvGNN(nn.Module):
+    def __init__(self, num_classes, hidden_dim, num_hidden, num_heads, threshold, device, adjacency_builder = 'cos_sim'):
+        super().__init__()
+        self.device=device #delete
         self.adjacency_builder = adjacency_builder
         
         if adjacency_builder == 'mlp':
-            self.builder = MLPBuilder(2*2048, 512)
+            self.builder = MLPBuilder(2048, 512)
         elif adjacency_builder == 'attention':
             self.builder = AttentionBuilder(2048, 512, 4)
+        elif adjacency_builder == 'transformer':
+            self.builder = TransformerBuilder(2048, 512, num_heads=4, num_blocks=4)
         
         
         self.num_classes = num_classes
@@ -159,6 +226,10 @@ class GATConvGNN(nn.Module):
             g = self.builder.build_graph(deep_features)
         elif self.adjacency_builder == 'attention':
             g = self.builder.build_graph(deep_features, self.THRESHOLD)
+        elif self.adjacency_builder == 'transformer':
+            g = self.builder.build_graph(deep_features, self.THRESHOLD)
+        elif self.adjacency_builder == 'fully_connected':
+            g = build_graph_cosine_similarity_fullyconnected(deep_features, self.THRESHOLD).to(self.device)
         else:
             raise NotImplementedError("Invalid builder")
     
@@ -166,10 +237,10 @@ class GATConvGNN(nn.Module):
         ### MESSAGE PASSING
         x = F.relu(self.gnn_layer_1(g, deep_features).sum(dim=1))
         
-        for gnn_layer in self.gnn_stack[:-1]:
-            x = F.relu(gnn_layer(g, x).sum(dim=1))
-        
-        x = self.gnn_stack[-1](g, x).squeeze(1)
+        for i, gnn_layer in enumerate(self.gnn_stack):
+            x = gnn_layer(g, x).sum(dim=1)
+            if i != len(self.gnn_stack)-1:
+                x = F.relu(x)
 
         x = torch.cat([deep_features, x], dim=1)
         x = F.leaky_relu(self.linear_1(x))

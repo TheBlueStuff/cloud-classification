@@ -1,0 +1,26 @@
+{
+    "os": "Linux-5.4.0-99-generic-x86_64-with-glibc2.27",
+    "python": "3.9.7",
+    "heartbeatAt": "2022-04-06T14:15:16.583510",
+    "startedAt": "2022-04-06T14:15:14.957901",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "gpu_count": 4,
+    "cpu_count": 24,
+    "cuda": null,
+    "args": [
+        "-f",
+        "/home/ltorres/.local/share/jupyter/runtime/kernel-ee5def1d-1fcb-43ef-b8a6-7b50d8444864.json"
+    ],
+    "state": "running",
+    "program": "leo/tesis/cloud-classification/code/notebooks/adjacency_construction/GCD MLP.ipynb",
+    "root": "/home/ltorres/leo/tesis/cloud-classification",
+    "git": {
+        "remote": "https://github.com/TheBlueStuff/cloud-classification.git",
+        "commit": "1d4d96a33f9b4b271721740de23eaa2536e579fb"
+    },
+    "email": "leonardtd@gmail.com",
+    "host": "discovery",
+    "username": "ltorres",
+    "executable": "/home/ltorres/miniconda3/bin/python"
+}

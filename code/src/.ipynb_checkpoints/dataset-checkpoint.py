@@ -116,6 +116,12 @@ class GRSCD:
         self.norm_mean = 155.5673
         self.norm_std = 70.5983
         
+        
+        self.aug_transform = T.Compose([T.RandomHorizontalFlip(),
+                      T.RandomHorizontalFlip(),
+                      T.RandomRotation(15),
+                      ])
+        
     def __len__(self):
         return len(self.image_paths)
 

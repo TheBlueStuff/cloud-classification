@@ -92,10 +92,10 @@ class GATConvGNN(nn.Module):
 
         x = F.relu(self.gnn_layer_1(g, deep_features).sum(dim=1))
         
-        for gnn_layer in self.gnn_stack[:-1]:
-            x = F.relu(gnn_layer(g, x).sum(dim=1))
-        
-        x = self.gnn_stack[-1](g, x).squeeze(1)
+        for i, gnn_layer in enumerate(self.gnn_stack):
+            x = gnn_layer(g, x).sum(dim=1)
+            if i != len(self.gnn_stack)-1:
+                x = F.relu(x)
 
         x = torch.cat([deep_features, x], dim=1)
         x = F.leaky_relu(self.linear_1(x))
