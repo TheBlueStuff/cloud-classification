@@ -35,7 +35,7 @@ async def create_file(file: UploadFile = File(...)):
     return {
         "class": classes[5][1], 
         "description": descriptions[5],
-        "image_url" : 'https://www.google.com/search?q=cloud&source=lnms&tbm=isch&sa=X&ved=2ahUKEwijqZmRhvf6AhWNErkGHRKOC_4Q_AUoAXoECAIQAw&biw=1920&bih=937&dpr=1#imgrc=Zfs7c0VnTZZXeM'
+        "image_url" : 'https://cdn.vox-cdn.com/thumbor/tZLxhLAWoEFRpf0pe-CirjvF0XY=/1400x788/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/15788040/20150428-cloud-computing.0.1489222360.jpg'
     }
 
 @app.post("/multipleFiles")
