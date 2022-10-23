@@ -46,5 +46,6 @@ async def create_file(file: UploadFile = File(...)):
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     cloud_type, image = infer(model.model, model.transform, img)
     return {
+        "file": file.filename,
         "class": classes[5][1]
     }
