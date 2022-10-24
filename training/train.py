@@ -57,7 +57,7 @@ def read_args():
 
 def main(config):
     set_seed(17)
-    device = torch.device('cuda:' + config["n_cuda"] if torch.cuda.is_available() else 'cpu')
+    device = torch.device('cuda:' + str(config["n_cuda"]) if torch.cuda.is_available() else 'cpu')
     print(device)
     wandb.login()
     wandb.init(
