@@ -6,7 +6,7 @@ import os
 class CAS(Dataset):
     """CAS Dataset."""
     def __init__(self, transform=None, data_path=None):
-
+        self.data_path = data_path
         self.classes = [
             (0, 'Ac'),
             (1, 'As'),
