@@ -1,7 +1,7 @@
 classes = [
         (0, 'Altocúmulos'),
         (1, 'Altoestratos'),
-        (2, 'Cumulonimbos'),
+        (2, 'Cumulonimbus'),
         (3, 'Cirros'),
         (4, 'Cirrocúmulos'),
         (5, 'Cirrostratos'),
