@@ -19,5 +19,5 @@ def infer_multiple(model, transform, file):
     with torch.no_grad():
         outputs = model(img)
         probs = F.softmax(outputs, dim=1)
-        cloud_type = cloud_type = torch.topk(probs, 1)[1].int().item()
+        cloud_type = torch.topk(probs, 1)[1].int().item()
     return cloud_type
