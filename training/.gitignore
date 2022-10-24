@@ -20,3 +20,4 @@ venv
 docs.zip
 archive.zip
 wandb
+nohup.out
