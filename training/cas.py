@@ -1,6 +1,7 @@
 from torch.utils.data import Dataset
 import pandas as pd
 import cv2
+import os
 
 class CAS(Dataset):
     """CAS Dataset."""
@@ -28,7 +29,10 @@ class CAS(Dataset):
     def __getitem__(self, idx):
         image_row = self.data.loc[idx, :]
         try:
-            image = cv2.imread(image_row['path'])
+            root = self.data_path.split('/')
+            root.pop(-1)
+            root = '/'.join(root)
+            image = cv2.imread(os.path.join(root, image_row['path']))
             image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
             label = image_row['n_class']
         except:
