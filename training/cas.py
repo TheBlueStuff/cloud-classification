@@ -6,7 +6,7 @@ class CAS(Dataset):
     """CAS Dataset."""
     def __init__(self, transform=None, data_path=None):
 
-        classes = [
+        self.classes = [
             (0, 'Ac'),
             (1, 'As'),
             (2, 'Cb'),
