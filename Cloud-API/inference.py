@@ -7,6 +7,7 @@ def infer(model, transform, file):
     cloud_type = 0
     with torch.no_grad():
         outputs = model(img)
-        probs = F.softmax(outputs).data.squeeze()
-        cloud_type = torch.topk(probs, 1)[1].int()
+        probs = F.softmax(outputs, dim=1)
+        cloud_type = torch.topk(probs, 1)[1].int()[0]
+        print("CLOUD TYPE!!!!!!!!!!", cloud_type)
     return cloud_type, file
