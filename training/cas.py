@@ -35,10 +35,11 @@ class CAS(Dataset):
             image = cv2.imread(os.path.join(root, image_row['path']))
             image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
             label = image_row['n_class']
+            if self.transform is not None:
+                image = self.transform(image=image)["image"]
         except:
             print(image_row['path'])
-        if self.transform is not None:
-            image = self.transform(image=image)["image"]
+            return None, None
         return image, label
     
     @staticmethod
