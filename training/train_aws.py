@@ -156,7 +156,7 @@ def read_args():
     parser.add_argument('--print-epochs', type=int, default=10)
     parser.add_argument('--print-times-per-epoch', type=int, default=20)
     parser.add_argument('--reduce-epochs', type=int, default=100)
-    parser.add_argument('--optimizer', type=int, default='Adam')
+    parser.add_argument('--optimizer', type=str, default='Adam')
     parser.add_argument('--early-stopping', type=bool, default=False)
     return parser.parse_args()
 
