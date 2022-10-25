@@ -4,7 +4,7 @@ import os
 # DATA PATH SERVER
 DATA_PATH = '/data/mandonaire/Cloudappreciationsociety/filtered_images_data_aug'
 # DATA PATH PERSONAL
-# DATA_PATH = './'
+DATA_PATH = './'
 import argparse
 import torch
 import torch.nn as nn
@@ -35,26 +35,31 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import balanced_accuracy_score
 import wandb
 import imgaug
+import json
 from datetime import datetime
 
 subprocess.run(["wandb", "login", "d579e30bd55604e563481f9625aebcc61c213737"])
 
 def read_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--learning-rate', type=float, default=0.0001)
+    parser.add_argument('--learning_rate', type=float, default=0.0001)
     parser.add_argument('--architecture', type=str, default='Inceptionv3')
     parser.add_argument('--dataset', type=str, default='CloudAppreciationSociety')
-    parser.add_argument('--epochs', type=int, default=80)
-    parser.add_argument('--batch-size', type=int, default=80)
-    parser.add_argument('--reduce-factor', type=int, default=10)
-    parser.add_argument('--print-epochs', type=int, default=10)
-    parser.add_argument('--print-times-per-epoch', type=int, default=20)
-    parser.add_argument('--reduce-epochs', type=int, default=100)
+    parser.add_argument('--epochs', type=int, default=50)
+    parser.add_argument('--batch_size', type=int, default=32)
+    parser.add_argument('--reduce_factor', type=int, default=10)
+    parser.add_argument('--print_epochs', type=int, default=1)
+    parser.add_argument('--print_times_per_epoch', type=int, default=20)
+    parser.add_argument('--reduce_epochs', type=int, default=50)
     parser.add_argument('--optimizer', type=str, default='Adam')
-    parser.add_argument('--early-stopping', type=bool, default=False)
+    parser.add_argument('--early_stopping', type=bool, default=True)
     parser.add_argument('--n-cuda', type=int, default=0)
     return parser.parse_args()
 
+def read_args_json():
+    with open('config.json', 'r') as f:
+        config = json.load(f)
+        return config
 
 def main(config):
     set_seed(17)
@@ -79,7 +84,7 @@ def main(config):
         in_ftrs = model.AuxLogits.fc.in_features
         model.AuxLogits.fc = nn.Linear(in_ftrs, CAS.get_n_classes())
         input_size = 299
-    elif config['architecture'] == 'Resnet-50':
+    elif config['architecture'] == 'ResNet-50':
         model = torch.hub.load('pytorch/vision:v0.10.0', 'resnet50', pretrained=True)
         in_ftrs = model.fc.in_features
         model.fc = nn.Linear(in_ftrs, CAS.get_n_classes())
@@ -254,6 +259,7 @@ def main(config):
                 early_stopping(loss, loss_validation)
                 if early_stopping.early_stop:
                     print("Stopped at epoch:", epoch)
+                    wandb.log({"stopped_epoch": epoch})
                     break
             except:
                 pass
@@ -301,15 +307,15 @@ def main(config):
     labels_f1 = torch.cat(labels_f1).tolist()
     avg_accuracy = accuracy_score(labels_f1, predicted_f1)
     balanced_accuracy = balanced_accuracy_score(labels_f1, predicted_f1)
-    f1_macro = f1_score(labels_f1, predicted_f1, average="macro")
-    f1_micro = f1_score(labels_f1, predicted_f1, average="micro")
+    f1_macro_test = f1_score(labels_f1, predicted_f1, average="macro")
+    f1_micro_test = f1_score(labels_f1, predicted_f1, average="micro")
     print("average accuracy of the model: ", avg_accuracy)
-    print("F1 Macro: ", f1_macro)
-    print("F1 Micro: ", f1_micro)
+    print("F1 Macro: ", f1_macro_test)
+    print("F1 Micro: ", f1_micro_test)
     acc = 100.0 * n_correct / n_samples
     wandb.log({"avg_accuracy": acc})
-    wandb.log({"f1_macro_test": f1_macro})
-    wandb.log({"f1_micro_test": f1_micro})
+    wandb.log({"f1_macro_test": f1_macro_test})
+    wandb.log({"f1_micro_test": f1_micro_test})
     wandb.log({"balanced_accuracy_test": balanced_accuracy})
     # total loss - divide by number of batches
     loss_test = loss_test / len(test_loader)
@@ -343,4 +349,19 @@ if __name__ == '__main__':
     "early_stopping": args.early_stopping,
     "n_cuda": args.n_cuda
     }
+    # args = read_args_json()
+    # config={
+    # "learning_rate": args["learning_rate"],
+    # "architecture": "Resnet-50",
+    # "dataset": "CloudAppreciationSociety",
+    # "epochs": 50,
+    # "batch_size": args["batch_size"],
+    # "reduce_factor": 10,
+    # "print_epochs": 1,
+    # "print_times_per_epoch": 20,
+    # "reduce_epochs": 50,
+    # "optimizer": 'Adam',
+    # "early_stopping": True,
+    # "n_cuda": 0
+    # }
     main(config)

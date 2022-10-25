@@ -1,0 +1,17 @@
+method: grid
+metric:
+  goal: maximize
+  name: f1_macro_test
+parameters:
+  batch_size:
+    values:
+      - 8
+      - 16
+      - 32
+  learning_rate:
+    values:
+      - 0.0001
+      - 0.0003
+      - 0.0005
+      - 0.001
+program: train.py
