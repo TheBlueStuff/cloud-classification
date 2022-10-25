@@ -38,7 +38,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import balanced_accuracy_score
 import wandb
 import imgaug
-import datetime
+from datetime import datetime
 
 subprocess.run(["wandb", "login", "d579e30bd55604e563481f9625aebcc61c213737"])
 
