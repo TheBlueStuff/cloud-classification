@@ -21,3 +21,6 @@ docs.zip
 archive.zip
 wandb
 nohup.out
+train
+test
+validation

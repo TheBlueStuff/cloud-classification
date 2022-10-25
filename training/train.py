@@ -35,6 +35,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import balanced_accuracy_score
 import wandb
 import imgaug
+import datetime
 
 subprocess.run(["wandb", "login", "d579e30bd55604e563481f9625aebcc61c213737"])
 
@@ -60,11 +61,13 @@ def main(config):
     device = torch.device('cuda:' + str(config["n_cuda"]) if torch.cuda.is_available() else 'cpu')
     print(device)
     wandb.login()
+    now = datetime.now()
+    now_txt = str(now).replace(":","-").replace(".", "-").replace(" ", "_")
     wandb.init(
     # Set the project where this run will be logged
     project="cloud-classification", 
     # We pass a run name (otherwise it’ll be randomly assigned, like sunshine-lollypop-10)
-    name=f"experiment_{config['architecture']}_{config['dataset']}", 
+    name=f"experiment_{config['architecture']}_{config['dataset']}_{now_txt}", 
     # Track hyperparameters and run metadata
     config=config)
 
@@ -134,6 +137,7 @@ def main(config):
     EARLY_STOPPING = config["early_stopping"]
     running_loss = 0.0
     running_correct = 0
+    running_predicted_size = 0
     criterion = nn.CrossEntropyLoss()
 
     if config['optimizer'] == 'Adam':
@@ -171,10 +175,12 @@ def main(config):
             running_loss += loss.item()
             _, predicted = torch.max(outputs.data, 1)
             running_correct += (predicted == labels).sum().item()
-            if (i+1) % (n_total_steps//print_times_per_epoch - 1) == 0:
+            running_predicted_size += predicted.size(0)
+            if (i+1) % (n_total_steps//print_times_per_epoch + 1) == 0:
                 print (f'Epoch [{epoch+1}/{num_epochs}], Step [{i+1}/{n_total_steps}], Loss: {loss.item():.4f}')
-                running_accuracy = running_correct / 100 / predicted.size(0)
+                running_accuracy = running_correct / running_predicted_size
                 running_correct = 0
+                running_predicted_size = 0
                 running_loss = 0.0
                 wandb.log({"loss": loss, "running_accuracy" : running_accuracy})
             
