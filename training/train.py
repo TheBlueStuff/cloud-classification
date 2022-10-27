@@ -148,14 +148,14 @@ def main(config):
     if config['optimizer'] == 'Adam':
         optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
     elif config['optimizer'] == 'SGD':
-        optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate, momentum=0.9)
+        optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate, momentum=0.9, weight_decay=2e-05)
     elif config['optimizer'] == 'NAdam':
         optimizer = torch.optim.NAdam(model.parameters(), lr=learning_rate)
 
     classes = train_data.classes
     matrix = np.zeros((len(classes), len(classes)))
     batch_size_validation = 40
-    early_stopping = EarlyStopping(tolerance=5, min_delta=0.4)
+    early_stopping = EarlyStopping(tolerance=5, min_delta=0.2)
     model.train()
     stream = tqdm(train_loader)
     for epoch in range(num_epochs):
