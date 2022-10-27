@@ -18,5 +18,6 @@ sweep_id = args.sweep_id
 
 # run wandb sweep
 os.chdir("cloud-classification/training")
+subprocess.run(["wandb", "login", "d579e30bd55604e563481f9625aebcc61c213737"])
 sweep_str = "mario-andonaire/cloud-classification/{}".format(sweep_id)
 subprocess.run(["wandb", "agent", sweep_str])
