@@ -17,4 +17,4 @@ parameters:
     values:
       - Adam
       - SGD
-program: train.py
+program: train_sweep.py
