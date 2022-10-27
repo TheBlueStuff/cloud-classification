@@ -5,9 +5,7 @@ import os
 
 REQUIREMENTS_PATH = '/opt/ml/processing/input/requirements'
 
-proc = subprocess.Popen(['sudo', 'yum', 'install', 'mesa-libGL', '-y'],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE).communicate(input=b'\n')
-print(proc)
-subprocess.run(['pip', 'install', 'torch', 'torchvision', 'torchaudio', '--extra-index-url', 'https://download.pytorch.org/whl/cu113'])
+# subprocess.run(['pip', 'install', 'torch', 'torchvision', 'torchaudio', '--extra-index-url', 'https://download.pytorch.org/whl/cu113'])
 subprocess.check_call([sys.executable, "-m", "pip", "install", "-r",
                         os.path.join(REQUIREMENTS_PATH, "requirements_aws.txt")])
 

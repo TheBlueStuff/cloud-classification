@@ -1,7 +1,7 @@
 method: grid
 metric:
   goal: maximize
-  name: f1_macro_test
+  name: f1_macro
 parameters:
   batch_size:
     values:
