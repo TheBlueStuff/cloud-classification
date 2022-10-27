@@ -51,7 +51,7 @@ def read_args():
     parser.add_argument('--print_epochs', type=int, default=1)
     parser.add_argument('--print_times_per_epoch', type=int, default=20)
     parser.add_argument('--reduce_epochs', type=int, default=50)
-    parser.add_argument('--optimizer', type=str, default='Adam')
+    parser.add_argument('--optimizer', type=str, default='SGD')
     parser.add_argument('--early_stopping', type=bool, default=True)
     parser.add_argument('--n-cuda', type=int, default=0)
     return parser.parse_args()
