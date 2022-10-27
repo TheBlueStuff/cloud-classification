@@ -263,7 +263,7 @@ def main(config):
     classes = train_data.classes
     matrix = np.zeros((len(classes), len(classes)))
     batch_size_validation = 40
-    early_stopping = EarlyStopping(tolerance=5, min_delta=0.4)
+    early_stopping = EarlyStopping(tolerance=5, min_delta=0.2)
     model.train()
     stream = tqdm(train_loader)
     for epoch in range(num_epochs):
