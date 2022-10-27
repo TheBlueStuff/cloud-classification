@@ -147,8 +147,10 @@ def main(config):
 
     if config['optimizer'] == 'Adam':
         optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
-    else:
+    elif config['optimizer'] == 'SGD':
         optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate, momentum=0.9)
+    elif config['optimizer'] == 'NAdam':
+        optimizer = torch.optim.NAdam(model.parameters(), lr=learning_rate)
 
     classes = train_data.classes
     matrix = np.zeros((len(classes), len(classes)))
