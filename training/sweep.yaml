@@ -13,5 +13,8 @@ parameters:
       - 0.0001
       - 0.0003
       - 0.0005
-      - 0.001
+  optimizer:
+    values:
+      - Adam
+      - SGD
 program: train.py
