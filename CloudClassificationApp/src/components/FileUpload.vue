@@ -183,7 +183,8 @@ export default {
       });
       console.log(csv);
       const anchor = document.createElement("a");
-      anchor.href = "data:text/csv;charset=utf-8," + encodeURIComponent(csv);
+      anchor.acceptCharset = "UTF-8";
+      anchor.href = "data:text/csv;charset=UTF-8," + encodeURIComponent(csv);
       anchor.target = "_blank";
       anchor.download = "results.csv";
       anchor.click();
