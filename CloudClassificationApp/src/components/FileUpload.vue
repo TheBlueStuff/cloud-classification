@@ -171,11 +171,11 @@ export default {
         })
         .catch((err) => {
           if (err.response) {
-            this.error_api = true;
+            this.error_input = true;
           } else if (err.request) {
             this.error_api = true;
           } else {
-            this.error_input = true;
+            this.error_api = true;
           }
         });
     },
@@ -204,11 +204,11 @@ export default {
           })
           .catch((err) => {
             if (err.response) {
-              this.error_api = true;
+              this.error_input = true;
             } else if (err.request) {
               this.error_api = true;
             } else {
-              this.error_input = true;
+              this.error_api = true;
             }
           });
       }
