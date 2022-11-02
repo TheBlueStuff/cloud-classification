@@ -26,3 +26,8 @@ pip install torch torchvision torchaudio --extra-index-url https://download.pyto
 ```
 pip install -r requirements.txt
 ```
+
+### Deploy API
+```
+nohup uvicorn main:app --reload --host 0.0.0.0 &
+```
