@@ -15,6 +15,22 @@
         :disabled="files.length > 0 && formSubmit"
       >
       </v-file-input>
+      <v-alert
+        dense
+        outlined
+        type="error"
+        v-if="error_api"
+        >
+        Error al generar la predicción del tipo de nube: <strong>API</strong> no disponible
+      </v-alert>
+      <v-alert
+        dense
+        outlined
+        type="error"
+        v-if="error_input"
+        >
+        Error al generar la predicción del tipo de nube: tipo de archivo incorrecto
+      </v-alert>
       <v-btn
         class="mt-3"
         color="primary"
@@ -27,7 +43,7 @@
     </v-form>
     <div
       class="mt-3 d-flex align-center"
-      v-if="progressStatus > 0 && progressStatus < 100"
+      v-if="progressStatus > 0 && progressStatus < 100 && error_api==false && error_input==false"
     >
       <b>Generando predicción</b>
       <v-progress-linear
@@ -81,7 +97,7 @@
       color="primary"
       outlined
       @click="reset"
-      v-if="formSubmit && ((multipleFileUploadData.length === files.length) || Object.keys(singleFileUploadData).length > 0)"
+      v-if="formSubmit && ((multipleFileUploadData.length === files.length) || Object.keys(singleFileUploadData).length > 0) || error_api==true || error_input==true"
       :class="{ 'ml-sm-3 mt-3 mt-sm-0': uploadType === 'multiple' }"
     >
       <v-img :src="require('@/assets/autorenew.svg')" class="mr-2" />
@@ -97,6 +113,8 @@ export default {
   data: () => ({
     files: [],
     formSubmit: false,
+    error_api: false,
+    error_input: false,
     uploadedImgSrc: null,
     progressStatus: 0,
     singleFileUploadData: {},
@@ -112,6 +130,8 @@ export default {
   methods: {
     reset() {
       this.formSubmit = false;
+      this.error_api = false;
+      this.error_input = false;
       this.progressStatus = 0;
       this.$refs.form.reset();
       this.uploadType = "";
@@ -131,7 +151,7 @@ export default {
         this.formSubmit = true;
       }
     },
-    singleFileUpload() {
+    async singleFileUpload() {
       const options = {
         onUploadProgress: (progressEvent) => {
           const { loaded, total } = progressEvent;
@@ -148,9 +168,18 @@ export default {
           if (res.data) {
             this.singleFileUploadData = res.data;
           }
+        })
+        .catch((err) => {
+          if (err.response) {
+            this.error_api = true;
+          } else if (err.request) {
+            this.error_api = true;
+          } else {
+            this.error_input = true;
+          }
         });
     },
-    multipleFileUpload() {
+    async multipleFileUpload() {
       const totalProgress =  100 / this.files.length
       this.progressStatus = totalProgress
       const myUploadProgress = (index) => (progress) => {
@@ -172,6 +201,15 @@ export default {
               filename: res.data.file,
               class: res.data.class,
             });
+          })
+          .catch((err) => {
+            if (err.response) {
+              this.error_api = true;
+            } else if (err.request) {
+              this.error_api = true;
+            } else {
+              this.error_input = true;
+            }
           });
       }
     },

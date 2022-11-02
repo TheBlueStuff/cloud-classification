@@ -1,5 +1,5 @@
 from platform import architecture
-from fastapi import FastAPI, File, UploadFile
+from fastapi import FastAPI, File, UploadFile, HTTPException
 from typing import Optional, List
 from typing import Union
 from fastapi.middleware.cors import CORSMiddleware
@@ -27,25 +27,31 @@ def read_root():
 
 @app.post("/singleFile")
 async def create_file(file: UploadFile = File(...)):
-    contents = await file.read()
-    nparr = np.fromstring(contents, np.uint8) 
-    img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-    cloud_type, image = infer(model.model, model.transform, img)
-    return {
-        "class": classes[cloud_type][1], 
-        "description": descriptions[cloud_type],
-        "image_url" : 'https://cdn.vox-cdn.com/thumbor/tZLxhLAWoEFRpf0pe-CirjvF0XY=/1400x788/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/15788040/20150428-cloud-computing.0.1489222360.jpg'
-    }
+    try:
+        contents = await file.read()
+        nparr = np.fromstring(contents, np.uint8) 
+        img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        cloud_type, image = infer(model.model, model.transform, img)
+        return {
+            "class": classes[cloud_type][1], 
+            "description": descriptions[cloud_type],
+            "image_url" : 'https://cdn.vox-cdn.com/thumbor/tZLxhLAWoEFRpf0pe-CirjvF0XY=/1400x788/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/15788040/20150428-cloud-computing.0.1489222360.jpg'
+        }
+    except Exception as e:
+        raise HTTPException(status_code=418, detail="wrong input")
 
 @app.post("/multipleFiles")
 async def create_file(file: UploadFile = File(...)):
-    contents = await file.read()
-    nparr = np.fromstring(contents, np.uint8) 
-    img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-    cloud_type = infer_multiple(model.model, model.transform, img)
-    return {
-        "file": file.filename,
-        "class": classes[cloud_type][1]
-    }
+    try:
+        contents = await file.read()
+        nparr = np.fromstring(contents, np.uint8) 
+        img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        cloud_type = infer_multiple(model.model, model.transform, img)
+        return {
+            "file": file.filename,
+            "class": classes[cloud_type][1]
+        }
+    except Exception as e:
+        raise HTTPException(status_code=418, detail="wrong input")
