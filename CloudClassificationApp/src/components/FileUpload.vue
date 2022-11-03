@@ -84,6 +84,7 @@
         <b>Tipo de Nube: </b>{{ singleFileUploadData.class }}
       </p>
       <p><b> Descripción: </b>{{ singleFileUploadData.description }}</p>
+      <p><b> Probabilidad: </b>{{ singleFileUploadData.prob }}</p>
     </div>
     <v-btn
       color="primary"
