@@ -10,7 +10,8 @@ def infer(model, transform, file):
         outputs = model(img)
         probs = F.softmax(outputs, dim=1).data.squeeze()
         cloud_type = torch.topk(probs, 1)[1].int().item()
-        prob = probs[cloud_type]
+        prob = probs[cloud_type].item()
+        prob = "{:.2f}".format(prob)
         print(prob)
     return cloud_type, file, prob
 
