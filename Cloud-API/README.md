@@ -9,7 +9,7 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-py38_4.10.3-Linux-x86_64.sh
 
 ### Create conda environment
 ```
-conda create --name my_env python=3.8.9
+conda create --name my_env python=3.8
 ```
 
 ### Activate conda environment
