@@ -31,12 +31,11 @@ async def create_file(file: UploadFile = File(...)):
         contents = await file.read()
         nparr = np.fromstring(contents, np.uint8) 
         img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
-        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         cloud_type, image, prob = infer(model.model, model.transform, img)
         return {
             "class": classes[cloud_type][1], 
             "description": descriptions[cloud_type],
-            "image_url" : 'https://cdn.vox-cdn.com/thumbor/tZLxhLAWoEFRpf0pe-CirjvF0XY=/1400x788/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/15788040/20150428-cloud-computing.0.1489222360.jpg',
+            "image" : image,
             "prob" : prob
         }
     except Exception as e:
