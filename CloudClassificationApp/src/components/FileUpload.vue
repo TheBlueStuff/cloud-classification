@@ -73,10 +73,15 @@
           <!--
           <v-img
             v-if="uploadedImgSrc && progressStatus === 100"
-            :src="singleFileUploadData.image_url"
+            :src="singleFileUploadData.image"
             class="ml-md-3 img-size"
           />
           -->
+          <v-img
+            v-if="uploadedImgSrc && progressStatus === 100"
+            :src="'data:image/png;base64,' + singleFileUploadData.image"
+            class="ml-md-3 img-size"
+          />
         </v-col>
       </v-row>
 
