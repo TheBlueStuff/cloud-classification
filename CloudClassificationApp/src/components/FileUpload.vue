@@ -85,11 +85,12 @@
         </v-col>
       </v-row>
 
-      <p class="mt-3 mb-0">
+      <p class="mt-3">
         <b>Tipo de Nube: </b>{{ singleFileUploadData.class }}
       </p>
       <p><b> Descripción: </b>{{ singleFileUploadData.description }}</p>
       <p><b> Probabilidad: </b>{{ singleFileUploadData.prob }}</p>
+      <p><b> Predicciones secundarias: </b>{{ singleFileUploadData.top2 }} ({{ singleFileUploadData.prob2 }}), {{ singleFileUploadData.top3 }} ({{ singleFileUploadData.prob3 }})</p>
     </div>
     <v-btn
       color="primary"

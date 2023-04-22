@@ -21,13 +21,12 @@ def infer(model, transform, file):
         outputs = model(img)
         probs = F.softmax(outputs, dim=1).data.squeeze()
         class_idx = torch.topk(probs, 1)[1].int()
-        cloud_type = torch.topk(probs, 1)[1].int().item()
-        prob = probs[cloud_type].item()
-        prob = "{:.2f}".format(prob)
-        print(prob)
+        cloud_types = torch.topk(probs, 3)
+        top_3 = [cloud_types[1][i].int().item() for i in range(3)]
+        probs = ["{:.2f}".format(cloud_types[0][i].item()) for i in range(3)]
     CAMs = returnCAM(features_blobs[0], weight_softmax, class_idx)
     image_base64 = show_cam(CAMs, width, height, orig_img)
-    return cloud_type, image_base64, prob
+    return top_3, image_base64, probs
 
 
 def infer_multiple(model, transform, file):

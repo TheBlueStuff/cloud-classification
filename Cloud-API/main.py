@@ -31,12 +31,16 @@ async def create_file(file: UploadFile = File(...)):
         contents = await file.read()
         nparr = np.fromstring(contents, np.uint8) 
         img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
-        cloud_type, image, prob = infer(model.model, model.transform, img)
+        cloud_types, image, probs = infer(model.model, model.transform, img)
         return {
-            "class": classes[cloud_type][1], 
-            "description": descriptions[cloud_type],
+            "class": classes[cloud_types[0]][1], 
+            "description": descriptions[cloud_types[0]],
             "image" : image,
-            "prob" : prob
+            "prob" : probs[0],
+            "top2" : classes[cloud_types[1]][1],
+            "prob2": probs[1],
+            "top3" : classes[cloud_types[2]][1],
+            "prob3": probs[2]
         }
     except Exception as e:
         raise HTTPException(status_code=418, detail="wrong input")
