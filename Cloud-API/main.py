@@ -20,13 +20,8 @@ app.add_middleware(
 )
 model = CNN()
 
-@app.get("/")
-def read_root():
-    return({"hello": "world"})
-
-
 @app.post("/singleFile")
-async def create_file(file: UploadFile = File(...)):
+async def single_file(file: UploadFile = File(...)):
     try:
         contents = await file.read()
         nparr = np.fromstring(contents, np.uint8) 
@@ -46,7 +41,7 @@ async def create_file(file: UploadFile = File(...)):
         raise HTTPException(status_code=418, detail="wrong input")
 
 @app.post("/multipleFiles")
-async def create_file(file: UploadFile = File(...)):
+async def multiple_files(file: UploadFile = File(...)):
     try:
         contents = await file.read()
         nparr = np.fromstring(contents, np.uint8) 
